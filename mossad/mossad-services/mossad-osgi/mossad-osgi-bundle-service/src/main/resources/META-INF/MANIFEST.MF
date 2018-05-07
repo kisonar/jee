@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: mossad-osgi-bundle-service
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework;version="[1.6,2)",javax.ejb
+Export-EJB: ALL
+Export-Package: com.mossad.osgi.budle.service.ejb

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: mossad-osgi-bundle-client
+Bundle-Version: 1.0.0.SNAPSHOT
+Bundle-Activator: com.mossad.osgi.bundle.client.ClientActivator

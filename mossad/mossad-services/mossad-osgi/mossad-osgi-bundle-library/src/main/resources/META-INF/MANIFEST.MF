@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: mossad-osgi-bundle-library
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework;version="[1.6,2)"
+
+
+
+
+

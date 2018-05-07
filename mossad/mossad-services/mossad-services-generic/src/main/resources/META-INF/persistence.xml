@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <!-- Remote run within EJB-->
+  <persistence-unit name="jdbc/Oracle_XE_JDBC_Resource_Mossad" transaction-type="JTA">
+    <jta-data-source>jdbc/Oracle_XE_JDBC_Resource_Mossad</jta-data-source>
+    <class>com.mossad.jpa.lib.domain.abstraction.AbstractEntityLite</class>
+    <class>com.mossad.jpa.lib.domain.user.User</class>  
+    <class>com.mossad.jpa.lib.domain.task.Task</class>
+    <class>com.mossad.jpa.lib.domain.abstraction.AbstractEntity</class>
+    <class>com.mossad.jpa.lib.domain.task.TaskPriority</class>
+    <class>com.mossad.jpa.lib.domain.task.TaskStatus</class>
+    <class>com.mossad.jpa.lib.domain.task.TaskType</class>
+  </persistence-unit>
+</persistence>
