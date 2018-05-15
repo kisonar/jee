@@ -1,0 +1,59 @@
+Oracle XE
+
+w SQLu wszytsko jest opisane
+
+
+------
+
+Konfigurcja GalssFIhsa
+
+
+Path to asadmin
+C:\Program Files\glassfish-4.0\bin
+
+http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.30
+http://mvnrepository.com/artifact/com.oracle/ojdbc14 ==> Oracle JDBC Driver » 10.2.0.4.0 
+
+
+Get the jar and put it to glassfish
+should be placed under the lib folder, not under lib/ext folder. 
+
+
+1 uruchamiamy skrypty z asadm.txt
+
+
+?For Local EJB runner set in run config
+?-Djava.ext.dirs=/usr/local/glassfish-3.1/glassfish/lib 
+?Run it with usage of RUN BUTTON - not run file ..
+
+? Konfiguracja zrodla danych za pomoca konsoli w asadmin.txt
+? Konfiguracja JMS w asadmin.txt ( na razie brak skryptow dla asadmin )
+
+
+
+http://cnu311bhh0:8080/mossad-web-servlet/ServletMossadAdmin
+
+
+netstat -aon | more
+
+Najpierw GlassFish
+Potem Oracle
+
+OSGI
+http://felix.apache.org/downloads.cgi
+
+D:\userdata\mmigdal\Application Data\NetBeans\8.0.2\config\GF_4.1\domain1\autodeploy\bundles
+
+
+select * from all_tables where table_name ='OPS_INFO_TBL';
+
+
+
+
+
+
+
+
+
+
+
