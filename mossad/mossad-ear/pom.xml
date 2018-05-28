@@ -12,39 +12,12 @@
     <name>${project.artifactId}</name>
 
     <dependencies> 
-        
-        <!--
-        <dependency>
-            <groupId>mossad</groupId>
-            <artifactId>mossad-access-jpa-ejb-config</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        -->  
-
-		<!--
-		
-		niekoniecznie bo zaciaga sie przez uslugi
-        <dependency>
-            <groupId>mossad</groupId>
-            <artifactId>mossad-irp</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency> 
-		-->
         <dependency>
             <groupId>mossad</groupId>
             <artifactId>mossad-services-generic</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>ejb</type>
-        </dependency>
-		
-        <!--
-        <dependency>
-            <groupId>mossad</groupId>
-            <artifactId>mossad-services-ejb</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <type>ejb</type>
-        </dependency>
-        -->                               
+        </dependency>                              
         <dependency>
             <groupId>mossad</groupId>
             <artifactId>mossad-web-servlet</artifactId>
