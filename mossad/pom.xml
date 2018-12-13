@@ -61,7 +61,7 @@
       <dependency>
         <groupId>org.glassfish.jersey.containers</groupId>
         <artifactId>jersey-container-servlet</artifactId>
-        <version>${jaxrs.version}}</version>
+        <version>${jaxrs.version}</version>
       </dependency>
       <dependency>
         <groupId>org.glassfish.jersey.core</groupId>
@@ -71,7 +71,7 @@
       <dependency>
         <groupId>org.glassfish.jersey.core</groupId>
         <artifactId>jersey-client</artifactId>
-        <version>${jaxrs.version}}</version>
+        <version>${jaxrs.version}</version>
       </dependency>
 
 
