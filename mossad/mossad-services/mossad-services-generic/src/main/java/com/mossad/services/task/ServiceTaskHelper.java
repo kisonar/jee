@@ -14,18 +14,20 @@ import javax.persistence.PersistenceContext;
 
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperLocal;
+import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperRemote;
 import com.mossad.jpa.lib.domain.task.TaskPriority;
 import com.mossad.jpa.lib.domain.task.TaskStatus;
 import com.mossad.jpa.lib.domain.task.TaskType;
 import javax.ejb.Local;
+import javax.ejb.Remote;
 
 /**
  * 
  * @author mmigdal
  */
-//@Stateless//(name = Constants.BINDING_SERVICE_HELPER, mappedName = Constants.BINDING_SERVICE_HELPER)
-//@Remote(IServiceTaskHelperRemote.class)
-//Local(IServiceTaskHelperLocal.class)
+@Stateless//(name = Constants.BINDING_SERVICE_HELPER, mappedName = Constants.BINDING_SERVICE_HELPER)
+@Remote(IServiceTaskHelperRemote.class)
+@Local(IServiceTaskHelperLocal.class)
 public class ServiceTaskHelper implements IServiceTaskHelperLocal//, IServiceTaskHelperRemote
 {
 
