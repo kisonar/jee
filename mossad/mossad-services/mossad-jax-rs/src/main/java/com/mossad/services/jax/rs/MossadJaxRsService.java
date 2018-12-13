@@ -13,8 +13,7 @@ public class MossadJaxRsService {
     @Path("hi")
     @GET
     @Produces(TEXT_PLAIN)
-    public String getMsg()
-    {
+    public String getMsg() {
         return "OKI";
     }
 }

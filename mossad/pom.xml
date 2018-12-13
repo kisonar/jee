@@ -57,12 +57,13 @@
       </dependency>
 
       <!-- JAX-RS -->
-      <!-- Jersey 2.19 -->
+      <!-- Is it needed by Tomcat? To verify -->
       <dependency>
         <groupId>org.glassfish.jersey.containers</groupId>
         <artifactId>jersey-container-servlet</artifactId>
         <version>${jaxrs.version}</version>
       </dependency>
+      <!-- Tomcat requires this artifact for 100%-->
       <dependency>
         <groupId>org.glassfish.jersey.inject</groupId>
         <artifactId>jersey-hk2</artifactId>
