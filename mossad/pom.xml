@@ -11,6 +11,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <jee.version>8.0</jee.version>
+    <jaxrs.version>2.27</jaxrs.version>
   </properties>
   <modules>
     <module>mossad-domain</module>
@@ -24,13 +26,13 @@
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-api</artifactId>
-        <version>8.0</version>
+        <version>${jee.version}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>javax</groupId>
         <artifactId>javaee-web-api</artifactId>
-        <version>8.0</version>
+        <version>${jee.version}</version>
         <scope>provided</scope>
       </dependency>
       <!-- TESTING Junit 5-->
@@ -53,6 +55,32 @@
         <version>6.0.0</version>
         <scope>provided</scope>
       </dependency>
+
+      <!-- JAX-RS -->
+      <!-- Is it needed by Tomcat? To verify -->
+      <dependency>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>${jaxrs.version}</version>
+      </dependency>
+      <!-- Tomcat requires this artifact for 100%-->
+      <dependency>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>${jaxrs.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-server</artifactId>
+        <version>${jaxrs.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <version>${jaxrs.version}</version>
+      </dependency>
+
+
     </dependencies>
   </dependencyManagement>
   <!--

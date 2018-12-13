@@ -16,9 +16,9 @@ import javax.ejb.Stateless;
  * @author mmigdal
  */
 @Stateless
-//@Remote(IVerificationInterfaceRemote.class)
-//@Local(IVerificationInterfaceLocal.class)
-public class VerificationService implements IVerificationInterfaceRemote{
+@Remote(IVerificationInterfaceRemote.class)
+@Local(IVerificationInterfaceLocal.class)
+public class VerificationService implements IVerificationInterfaceRemote,IVerificationInterfaceLocal{
 
     @Override
     public void verify() {

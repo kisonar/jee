@@ -30,11 +30,11 @@ import javax.ejb.Remote;
  *
  * @author mmigdal
  */
-//@Stateless
+@Stateless
 // (name=Constants.BINDING_SERVICE_USER,mappedName=Constants.BINDING_SERVICE_USER)
-//@Remote(IServiceUserRemote.class)
-//@Local(IServiceUserLocal.class)
-//@WebService()
+@Remote(IServiceUserRemote.class)
+@Local(IServiceUserLocal.class)
+@WebService()
 public class ServiceUser implements IServiceUserLocal, IServiceUserRemote 
 {
 
@@ -59,14 +59,14 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote
     }
 
     @Override
-    //@WebMethod
+    @WebMethod
     public User loginUser(String email, String password)
             throws UserNotFoundException {
 
         return userAccessor.loginUser(email, password);
     }
 
-    //@WebMethod
+    @WebMethod
     @Override
     public User getById(Long id) throws UserNotFoundException {
 

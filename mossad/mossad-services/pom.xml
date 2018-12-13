@@ -15,5 +15,6 @@
         <module>mossad-irp</module>
         <module>mossad-services-generic</module>
         <module>mossad-osgi</module>
+        <module>mossad-jax-rs</module>
     </modules>
 </project>
