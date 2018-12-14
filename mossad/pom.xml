@@ -39,7 +39,7 @@
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.1.0</version>
+        <version>5.3.2</version>
         <scope>test</scope>
       </dependency>
       <!-- OSGI -->
@@ -106,14 +106,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.19</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.junit.platform</groupId>
-              <artifactId>junit-platform-surefire-provider</artifactId>
-              <version>1.1.0</version>
-            </dependency>
-          </dependencies>
+          <version>3.0.0-M2</version>
           <configuration>
             <detail>true</detail>
             <printSummary>true</printSummary>
