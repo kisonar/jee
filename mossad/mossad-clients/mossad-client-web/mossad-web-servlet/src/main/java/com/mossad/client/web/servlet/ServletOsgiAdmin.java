@@ -5,6 +5,7 @@
  */
 package com.mossad.client.web.servlet;
 
+import com.mossad.irp.servicelocator.ServiceLocator;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,27 +14,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.naming.NamingException;
-
 //import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
-import com.mossad.irp.servicelocator.ServiceLocator;
 
 /**
- *
  * @author mmigdal
  */
 @WebServlet(name = "ServletOsgiAdmin", urlPatterns = {"/ServletOsgiAdmin"})
 public class ServletOsgiAdmin extends HttpServlet {
-    
+
     private ServiceLocator locator = new ServiceLocator();
-     //com.mossad.osgi.library.OsgiEjbInterfaceRemote
+    //com.mossad.osgi.library.OsgiEjbInterfaceRemote
 
     /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      *
      * @param request servlet request
      * @param response servlet response
@@ -41,7 +34,7 @@ public class ServletOsgiAdmin extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -55,12 +48,11 @@ public class ServletOsgiAdmin extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
 
-            
             //"com.mossad.osgi.library.OsgiEjbInterfaceRemote"
             //java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService, 
             //java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService!com.mossad.osgi.library.OsgiEjbInterfaceRemote
             //
-            
+
             //OK
             /*
             String remoteEJB = "java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService!com.mossad.osgi.library.OsgiEjbInterfaceRemote";
@@ -93,6 +85,7 @@ public class ServletOsgiAdmin extends HttpServlet {
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
@@ -103,7 +96,7 @@ public class ServletOsgiAdmin extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -117,7 +110,7 @@ public class ServletOsgiAdmin extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         processRequest(request, response);
     }
 

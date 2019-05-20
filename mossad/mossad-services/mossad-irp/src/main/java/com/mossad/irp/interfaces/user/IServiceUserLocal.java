@@ -14,6 +14,7 @@ import javax.ejb.Local;
 public interface IServiceUserLocal //extends IServiceUser 
 
 {
+
     User createUser(String email, String password, String name, String surname) throws UserExistsException;
 
     // TODO to remove - use REALM instead
@@ -24,7 +25,7 @@ public interface IServiceUserLocal //extends IServiceUser
     User getByEmail(String email) throws UserNotFoundException;
 
     User updateUser(String newName, String newSurname, User user)
-            throws UserNotFoundException;
+        throws UserNotFoundException;
 
     void activateUser(Long id);
 

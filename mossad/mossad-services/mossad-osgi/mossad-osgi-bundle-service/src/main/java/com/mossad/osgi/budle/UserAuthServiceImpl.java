@@ -9,7 +9,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * @author mmigdal
  */
 public class UserAuthServiceImpl implements UserAuthService {
@@ -18,7 +17,7 @@ public class UserAuthServiceImpl implements UserAuthService {
 
     @Override
     public boolean login(String user, String password) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
         if (users.containsKey(user) && users.containsValue(password)) {
             return true;
@@ -29,7 +28,7 @@ public class UserAuthServiceImpl implements UserAuthService {
 
     @Override
     public boolean register(String user, String password) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
         if (users.containsKey(user) || users.containsValue(password)) {
             return false;

@@ -7,7 +7,6 @@ package com.mossad.lib.util;
 import java.util.Calendar;
 
 /**
- *
  * @author mmigdal
  */
 public class TimeMeasurement {
@@ -40,8 +39,8 @@ public class TimeMeasurement {
         return Calendar.getInstance().getTimeInMillis();
     }
 
-    public void printResult(){
-        System.out.println( String.format(" Operation took: %s ", this.getResultInMiliseconds()));
+    public void printResult() {
+        System.out.println(String.format(" Operation took: %s ", this.getResultInMiliseconds()));
     }
 
 

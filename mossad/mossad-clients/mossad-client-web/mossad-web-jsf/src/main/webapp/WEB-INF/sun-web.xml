@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE sun-web-app PUBLIC "-//Sun Microsystems, Inc.//DTD GlassFish Application Server 3.0 Servlet 3.0//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_3_0-0.dtd">
+<!DOCTYPE sun-web-app PUBLIC
+  "-//Sun Microsystems, Inc.//DTD GlassFish Application Server 3.0 Servlet 3.0//EN"
+  "http://www.sun.com/software/appserver/dtds/sun-web-app_3_0-0.dtd">
 <sun-web-app>
-    <context-root>mossad</context-root>
+  <context-root>mossad</context-root>
 
-    <parameter-encoding default-charset="UTF-8"/>
-    
-    <security-role-mapping>
-        <role-name>USER</role-name>
-        <group-name>mossad</group-name>
-    </security-role-mapping>
-    
-    <security-role-mapping>
-        <role-name>ADMIN</role-name>
-        <group-name>admins</group-name>
-    </security-role-mapping>
- 
+  <parameter-encoding default-charset="UTF-8"/>
+
+  <security-role-mapping>
+    <group-name>mossad</group-name>
+    <role-name>USER</role-name>
+  </security-role-mapping>
+
+  <security-role-mapping>
+    <group-name>admins</group-name>
+    <role-name>ADMIN</role-name>
+  </security-role-mapping>
+
 </sun-web-app>

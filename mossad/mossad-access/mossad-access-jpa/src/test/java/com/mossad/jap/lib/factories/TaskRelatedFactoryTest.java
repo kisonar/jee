@@ -4,32 +4,31 @@
  */
 package com.mossad.jap.lib.factories;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 
 /**
- *
  * @author mmigdal
  */
 public class TaskRelatedFactoryTest {
-    
-    
+
+
     @BeforeAll
-    public void setUp(){
+    public void setUp() {
     }
-    
+
     @AfterAll
-    public void tearDown(){
+    public void tearDown() {
     }
-    
-    
-    public void dummyTest(){
-    
+
+
+    public void dummyTest() {
+
         Assertions.assertTrue(true);
-        
+
         System.out.println("TODO");
-        
+
     }
-    
+
 }

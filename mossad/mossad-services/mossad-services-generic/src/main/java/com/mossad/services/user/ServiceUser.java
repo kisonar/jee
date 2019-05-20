@@ -4,42 +4,37 @@
  */
 package com.mossad.services.user;
 
+import com.mossad.irp.interfaces.user.IServiceUserLocal;
+import com.mossad.irp.interfaces.user.IServiceUserRemote;
+import com.mossad.jpa.lib.accsessor.user.UserAccessor;
+import com.mossad.jpa.lib.domain.user.User;
+import com.mossad.jpa.lib.factories.UserFactory;
+import com.mossad.lib.domain.constants.Constants;
+import com.mossad.lib.domain.exceptions.user.UserExistsException;
+import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
 import java.util.List;
-import java.util.logging.*;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.ejb.Local;
+import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import com.mossad.lib.domain.constants.Constants;
-import com.mossad.lib.domain.exceptions.user.UserExistsException;
-import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
-import com.mossad.irp.interfaces.user.IServiceUserLocal;
-import com.mossad.irp.interfaces.user.IServiceUserRemote;
-import com.mossad.jpa.lib.accsessor.user.UserAccessor;
-import com.mossad.jpa.lib.factories.UserFactory;
-import com.mossad.jpa.lib.domain.user.User;
-import javax.ejb.Local;
-import javax.ejb.Remote;
-
 /**
- *
  * @author mmigdal
  */
 @Stateless
 // (name=Constants.BINDING_SERVICE_USER,mappedName=Constants.BINDING_SERVICE_USER)
 @Remote(IServiceUserRemote.class)
 @Local(IServiceUserLocal.class)
-public class ServiceUser implements IServiceUserLocal, IServiceUserRemote 
-{
-
-    private UserFactory userFactory;
-    private UserAccessor userAccessor;
+public class ServiceUser implements IServiceUserLocal, IServiceUserRemote {
 
     private static final Logger log = Logger.getLogger(Constants.LOGGER_SERVICE_USER);
-
+    private UserFactory userFactory;
+    private UserAccessor userAccessor;
     @PersistenceContext
     private EntityManager em;
 
@@ -57,7 +52,7 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote
 
     @Override
     public User loginUser(String email, String password)
-            throws UserNotFoundException {
+        throws UserNotFoundException {
 
         return userAccessor.loginUser(email, password);
     }
@@ -83,13 +78,13 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote
 
     @Override
     public User createUser(String email, String password, String name,
-            String surname) throws UserExistsException {
+        String surname) throws UserExistsException {
         return userAccessor.createUser(email, password, name, surname);
     }
 
     @Override
     public User updateUser(String newName, String newSurname, User user)
-            throws UserNotFoundException {
+        throws UserNotFoundException {
         return userAccessor.updateUser(newName, newSurname, user);
     }
 

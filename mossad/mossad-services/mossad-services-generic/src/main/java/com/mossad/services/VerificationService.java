@@ -12,17 +12,17 @@ import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
 /**
- *
  * @author mmigdal
  */
 @Stateless
 @Remote(IVerificationInterfaceRemote.class)
 @Local(IVerificationInterfaceLocal.class)
-public class VerificationService implements IVerificationInterfaceRemote,IVerificationInterfaceLocal{
+public class VerificationService implements IVerificationInterfaceRemote, IVerificationInterfaceLocal {
 
     @Override
     public void verify() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException(
+            "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

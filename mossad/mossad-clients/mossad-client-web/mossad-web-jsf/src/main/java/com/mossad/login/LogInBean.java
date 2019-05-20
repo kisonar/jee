@@ -5,7 +5,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 /**
- *
  * @author Piotr Babij
  */
 @ManagedBean(name = "logInBean")
@@ -20,16 +19,20 @@ public class LogInBean implements Serializable {
         return password;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public boolean isLoggedIn() {
+        return loggedIn;
     }
 
     public void setLoggedIn(boolean b) {
@@ -39,9 +42,5 @@ public class LogInBean implements Serializable {
 
         }
         loggedIn = b;
-    }
-
-    public boolean isLoggedIn() {
-        return loggedIn;
     }
 }

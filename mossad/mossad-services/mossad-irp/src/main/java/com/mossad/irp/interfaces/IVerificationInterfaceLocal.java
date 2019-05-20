@@ -8,11 +8,11 @@ package com.mossad.irp.interfaces;
 import javax.ejb.Local;
 
 /**
- *
  * @author mmigdal
  */
 
 @Local
 public interface IVerificationInterfaceLocal {
-     void verify();
+
+    void verify();
 }

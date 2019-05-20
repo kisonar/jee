@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *  This filter is meant to prevent already logged in users from accessing the log in page.
- * 
+ * This filter is meant to prevent already logged in users from accessing the log in page.
+ *
  * @author Piotr Babij
  */
 public class AlreadyLoggedInFilter implements Filter {
@@ -30,12 +30,13 @@ public class AlreadyLoggedInFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain fc) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain fc)
+        throws IOException, ServletException {
         final HttpServletRequest r = (HttpServletRequest) request;
         final String remoteUser = r.getRemoteUser();
         final String authType = r.getAuthType();
         final Principal userPrincipal = r.getUserPrincipal();
-        
+
         if (remoteUser != null || authType != null || userPrincipal != null) {
             ((HttpServletResponse) response).sendRedirect(target);
         } else {

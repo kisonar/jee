@@ -11,8 +11,8 @@ import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
 /**
- * Changes style of every element with class <pre>loginInput</pre> to 
- * 
+ * Changes style of every element with class <pre>loginInput</pre> to
+ *
  * @author Piotr
  */
 public class ValidationStylePhaseListener implements PhaseListener {
@@ -27,13 +27,15 @@ public class ValidationStylePhaseListener implements PhaseListener {
 
         while (it.hasNext()) {
             final String clientId = it.next();
-            if(focus == null) {
+            if (focus == null) {
                 focus = clientId;
             }
             highlight.append(clientId);
-            if(it.hasNext()) highlight.append(',');
+            if (it.hasNext()) {
+                highlight.append(',');
+            }
         }
-        
+
         context.getExternalContext().getRequestMap().put("focus", focus);
         context.getExternalContext().getRequestMap().put("highlight", highlight.toString());
     }

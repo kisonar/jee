@@ -6,14 +6,12 @@ package com.mossad.jpa.lib.domain.task;
 
 import com.mossad.jpa.lib.domain.abstraction.AbstractEntity;
 import com.mossad.lib.domain.constants.Constants;
-
 import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
- *
  * @author mmigdal
  */
 
@@ -21,24 +19,20 @@ import javax.persistence.Table;
 @Table(name = Constants.TASK_TYPE_DEF)
 @NamedQueries({
     @NamedQuery(name = Constants.TASK_TYPE_QUERY_NAME,
-    query = Constants.TASK_TYPE_QUERY)
+        query = Constants.TASK_TYPE_QUERY)
 })
-
-
 
 public class TaskType extends AbstractEntity {
 
     private static final long serialVersionUID = 1L;
 
     public TaskType() {
-        
+
     }
 
     public TaskType(Long id, String value) {
         super(id, value);
     }
-    
-    
-    
-    
+
+
 }

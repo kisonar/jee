@@ -1,35 +1,35 @@
 package com.mossad.lib.domain.task;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TaskAttributesTest {
 
-    private TaskAttributes taskAttributes ;//= new TaskAttributes();
     private final String description = "test description";
     private final long priority = 0;
     private final long status = 2;
     private final String title = "TAsk title";
     private final long type = 1;
     private final long user = 123456789;
+    private TaskAttributes taskAttributes;//= new TaskAttributes();
 
-    
     @BeforeEach
     void setUp() {
         taskAttributes = new TaskAttributes();
     }
 
-    
+
     @AfterEach
     public void tearDown() {
         taskAttributes = null;
     }
-    
+
     @Test
-    void check(){}
-    
+    void check() {
+    }
+
 
     @Test
     public void testTaskAttributes() {

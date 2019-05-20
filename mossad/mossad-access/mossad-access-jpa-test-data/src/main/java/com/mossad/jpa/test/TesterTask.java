@@ -4,18 +4,15 @@
  */
 package com.mossad.jpa.test;
 
+import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.test.data.DomainTestData;
+import com.mossad.lib.domain.constants.Constants;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.mossad.jpa.lib.domain.task.Task;
-import com.mossad.lib.domain.constants.Constants;
-
 /**
- *
  * @author mmigdal
  */
 public class TesterTask {
@@ -36,7 +33,7 @@ public class TesterTask {
         // TaskStatus creation
 
         DomainTestData data = new DomainTestData();
-        
+
         data.fillTasks();
         em.getTransaction().begin();
 
@@ -59,9 +56,8 @@ public class TesterTask {
             em.close();
         }
 
-
         System.out.println(Constants.separator);
-        
+
         em = emf.createEntityManager();
 
         tasks.clear();
@@ -85,31 +81,29 @@ public class TesterTask {
         }
         */
         System.out.println(Constants.separator);
-        
+
         System.out.println("All tasks for specicfied usrer");
-        
-        tasks = em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_USER_TASKS).setParameter(Constants.PARAM_USER_ID, 1).getResultList();
+
+        tasks = em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_USER_TASKS).setParameter(Constants.PARAM_USER_ID, 1)
+            .getResultList();
 
         for (Task task : tasks) {
 
             System.out.println(Constants.entitySeparator);
-            System.out.println( task.getId() );
-            System.out.println( task.getTitle() );
-            System.out.println( task.getDescription() );
-            System.out.println( task.getPriority() );
-            System.out.println( task.getUserId() );
-           // System.out.println( task.getType() );
+            System.out.println(task.getId());
+            System.out.println(task.getTitle());
+            System.out.println(task.getDescription());
+            System.out.println(task.getPriority());
+            System.out.println(task.getUserId());
+            // System.out.println( task.getType() );
             //int status
-            
+
         }
-        
-        
-        
-        
-        em.close(); 
+
+        em.close();
 
         System.out.println("Done task itself .... ");
-         
+
 
     }
 }

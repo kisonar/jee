@@ -4,20 +4,16 @@
  */
 package com.mossad.jpa.test;
 
+import com.mossad.jpa.lib.domain.task.TaskType;
 import com.mossad.jpa.test.data.DomainTestData;
+import com.mossad.lib.domain.constants.Constants;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.mossad.jpa.lib.domain.task.TaskType;
-import com.mossad.lib.domain.constants.Constants;
-
-
 
 /**
- *
  * @author mmigdal
  */
 public class TesterTaskType {
@@ -57,7 +53,6 @@ public class TesterTaskType {
             em.close();
         }
 
-
         System.out.println(Constants.separator);
 
         em = emf.createEntityManager();
@@ -72,8 +67,6 @@ public class TesterTaskType {
             System.out.println(taskType.getId());
             System.out.println(taskType.getValue());
         }
-
-
 
         System.out.println("Done task types .... ");
 

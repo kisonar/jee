@@ -7,7 +7,6 @@ package com.mossad.irp.interfaces.task.helper;
 import javax.ejb.Remote;
 
 /**
- *
  * @author mmigdal
  */
 @Remote

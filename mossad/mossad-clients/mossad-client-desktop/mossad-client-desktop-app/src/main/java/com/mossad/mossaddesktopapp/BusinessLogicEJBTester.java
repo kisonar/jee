@@ -1,21 +1,17 @@
 package com.mossad.mossaddesktopapp;
 
-import com.mossad.jpa.lib.irp.IServiceTask;
+import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperRemote;
 import com.mossad.irp.servicelocator.IServiceLocator;
 import com.mossad.irp.servicelocator.ServiceLocator;
-import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperRemote;
 import com.mossad.jpa.lib.domain.task.TaskType;
 import com.mossad.lib.util.TimeMeasurement;
-
 import java.util.Calendar;
 import java.util.List;
 import java.util.Properties;
-
 import javax.naming.NamingException;
 
 /**
  * Hello world!
- *
  */
 public class BusinessLogicEJBTester {
 
@@ -24,8 +20,6 @@ public class BusinessLogicEJBTester {
         TimeMeasurement tm = new TimeMeasurement();
 
         tm.reset();
-
-
 
         Properties props = new Properties();
         props.setProperty("java.naming.factory.initial", "com.sun.enterprise.naming.SerialInitContextFactory");
@@ -42,7 +36,6 @@ public class BusinessLogicEJBTester {
         System.out.println("Created ServiceLocator " + tm.getResultInMiliseconds());
         tm.reset();
         IServiceTaskHelperRemote taskHelper = null;
-
 
         try {
 
@@ -78,8 +71,6 @@ public class BusinessLogicEJBTester {
             }
 
 
-
-
         } catch (NamingException e) {
             //System.out.println( e.getExplanation() );
             //System.out.println( e.getMessage() );
@@ -91,6 +82,6 @@ public class BusinessLogicEJBTester {
         }
 
         System.out.println("BusinessLogicEJBTester finished .... " + Calendar.getInstance().getTime().toString());
-    
+
     }
 }

@@ -1,12 +1,11 @@
 package com.mossad.jpa.lib.irp;
 
-import java.util.List;
-
 import com.mossad.jpa.lib.domain.user.User;
 import com.mossad.lib.domain.exceptions.user.UserExistsException;
 import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
+import java.util.List;
 
-    public interface IServiceUser {
+public interface IServiceUser {
 
     User createUser(String email, String password, String name, String surname) throws UserExistsException;
 
@@ -18,7 +17,7 @@ import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
     User getByEmail(String email) throws UserNotFoundException;
 
     User updateUser(String newName, String newSurname, User user)
-            throws UserNotFoundException;
+        throws UserNotFoundException;
 
     void activateUser(Long id);
 
