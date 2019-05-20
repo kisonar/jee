@@ -4,24 +4,21 @@
  */
 package com.mossad.jpa.test.data;
 
-import com.mossad.jpa.lib.factories.TaskFactory;
-import com.mossad.jpa.lib.factories.TaskRelatedFactory;
-import com.mossad.jpa.lib.factories.UserFactory;
 import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.domain.task.TaskPriority;
 import com.mossad.jpa.lib.domain.task.TaskStatus;
 import com.mossad.jpa.lib.domain.task.TaskType;
 import com.mossad.jpa.lib.domain.user.User;
-import com.mossad.jpa.test.data.UsersContainer;
+import com.mossad.jpa.lib.factories.TaskFactory;
+import com.mossad.jpa.lib.factories.TaskRelatedFactory;
+import com.mossad.jpa.lib.factories.UserFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.task.TaskAttributes;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 /**
- *
  * @author mmigdal
  */
 public class DomainTestData {

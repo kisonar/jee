@@ -1,31 +1,35 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>mossad</groupId>
-        <artifactId>mossad-access</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>mossad-access-jpa-test-data</artifactId>
+<project
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>mossad-access-jpa-test-data</artifactId>
+  <dependencies>
+    <dependency>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <groupId>jakarta.persistence</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+    </dependency>
+
+    <dependency>
+      <artifactId>mossad-access-jpa</artifactId>
+      <groupId>mossad</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+  </dependencies>
+  <modelVersion>4.0.0</modelVersion>
+  <name>${project.artifactId}</name>
+  <parent>
+    <artifactId>mossad-access</artifactId>
+    <groupId>mossad</groupId>
     <version>1.0-SNAPSHOT</version>
-    <name>${project.artifactId}</name>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mossad</groupId>
-            <artifactId>mossad-access-jpa</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-    </dependencies>
+  </parent>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <version>1.0-SNAPSHOT</version>
 </project>

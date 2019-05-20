@@ -12,8 +12,8 @@ import java.util.ResourceBundle;
 import javax.faces.context.FacesContext;
 
 /**
- * Custom resource bundle that reads properties file encoded in UTF8 standard 
- * 
+ * Custom resource bundle that reads properties file encoded in UTF8 standard
+ *
  * @author Piotr Babij
  */
 public class UTF8ResourceBundle extends ResourceBundle {
@@ -25,7 +25,7 @@ public class UTF8ResourceBundle extends ResourceBundle {
 
     public UTF8ResourceBundle() {
         setParent(ResourceBundle.getBundle(BUNDLE_NAME,
-                FacesContext.getCurrentInstance().getViewRoot().getLocale(), UTF8_CONTROL));
+            FacesContext.getCurrentInstance().getViewRoot().getLocale(), UTF8_CONTROL));
     }
 
     @Override
@@ -41,8 +41,9 @@ public class UTF8ResourceBundle extends ResourceBundle {
     protected static class UTF8Control extends Control {
 
         @Override
-        public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader, boolean reload)
-                throws IllegalAccessException, InstantiationException, IOException {
+        public ResourceBundle newBundle(String baseName, Locale locale, String format, ClassLoader loader,
+            boolean reload)
+            throws IllegalAccessException, InstantiationException, IOException {
             // The below code is copied from default Control#newBundle() implementation.
             // Only the PropertyResourceBundle line is changed to read the file as UTF-8.
             String bundleName = toBundleName(baseName, locale);
@@ -75,7 +76,7 @@ public class UTF8ResourceBundle extends ResourceBundle {
         public Locale getFallbackLocale(String baseName, Locale locale) {
             return locale == Locale.ROOT ? null : Locale.ROOT;
         }
-        
-        
+
+
     }
 }

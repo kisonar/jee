@@ -21,7 +21,7 @@ import javax.faces.event.ValueChangeEvent;
 
 /**
  * This bean stores the information about locale of current user.
- * 
+ *
  * @author Piotr Babij
  */
 @ManagedBean(name = "localeBean")

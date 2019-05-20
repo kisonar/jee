@@ -5,7 +5,6 @@
 package com.mossad.lib.domain.exceptions.user;
 
 /**
- *
  * @author mmigdal
  */
 public final class UserExistsException extends Exception {

@@ -6,14 +6,14 @@
 package com.mossad.access.xml;
 
 /**
- *
  * @author Administrator
  */
-public  class Element {
+public class Element {
+
     private String name;
     private String type;
 
-    public Element(){
+    public Element() {
     }
     /*
     public Element(String name , String type){
@@ -21,6 +21,7 @@ public  class Element {
        this.type = type;
     }
     */
+
     /**
      * @return the name
      */
@@ -48,7 +49,6 @@ public  class Element {
     public void setType(String type) {
         this.type = type;
     }
-
 
 
 }

@@ -7,13 +7,11 @@ package com.mossad.osgi.budle.service.ejb;
 
 import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
 import javax.annotation.security.PermitAll;
-import javax.annotation.security.RolesAllowed;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 
 
 /**
- *
  * @author mmigdal
  */
 

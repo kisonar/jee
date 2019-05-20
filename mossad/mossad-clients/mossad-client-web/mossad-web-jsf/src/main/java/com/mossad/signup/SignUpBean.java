@@ -6,16 +6,13 @@ package com.mossad.signup;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.component.UIForm;
-import javax.faces.context.FacesContext;
 import javax.faces.event.AjaxBehaviorEvent;
 
 /**
- *
  * @author Piotr
  */
 @ManagedBean
@@ -89,11 +86,11 @@ public class SignUpBean {
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(inputStr);
         final boolean valid = matcher.matches();
-        
-        if(!valid) {
+
+        if (!valid) {
             // add message to faces context
         }
-        
+
         return valid;
     }
 
@@ -114,8 +111,7 @@ public class SignUpBean {
     public void setForm(UIForm form) {
         this.form = form;
     }
-    
-    
+
 
     /**
      * @return the emailField

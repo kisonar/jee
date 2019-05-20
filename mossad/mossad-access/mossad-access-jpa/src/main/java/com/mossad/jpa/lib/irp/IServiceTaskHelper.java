@@ -11,7 +11,6 @@ import com.mossad.jpa.lib.domain.task.TaskType;
 import java.util.List;
 
 /**
- *
  * @author mmigdal
  */
 public interface IServiceTaskHelper {

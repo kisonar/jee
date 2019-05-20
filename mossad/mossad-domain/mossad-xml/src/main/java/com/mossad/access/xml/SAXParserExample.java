@@ -4,37 +4,34 @@
  */
 package com.mossad.access.xml;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Logger;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.logging.Level;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-
 import org.xml.sax.helpers.DefaultHandler;
 
 /**
- *
  * @author Administrator
  */
 public class SAXParserExample extends DefaultHandler //implements ParsingInterface 
 {
 
-    private final Logger LOGGER = Logger.getLogger(this.getClass().getCanonicalName());
-
-    private final List<Group> myGroups;
-    private Group itemGroup;
-    private Element itemElement;
-    private final String filePath;
     private final static String GROUP = "group";
     private final static String ELEMENT = "element";
     private final static String NAME = "name";
     private final static String TYPE = "type";
+    private final Logger LOGGER = Logger.getLogger(this.getClass().getCanonicalName());
+    private final List<Group> myGroups;
+    private final String filePath;
+    private Group itemGroup;
+    private Element itemElement;
 
     public SAXParserExample(String filePath) {
         this.myGroups = new ArrayList<>();
@@ -96,7 +93,8 @@ public class SAXParserExample extends DefaultHandler //implements ParsingInterfa
 
                 // System.out.println("End of tag element");
                 System.out.println(itemElement.getName());
-                System.out.println(itemElement.getType());;
+                System.out.println(itemElement.getType());
+                ;
                 itemGroup.addElement(itemElement);
                 itemElement = null;
             }

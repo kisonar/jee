@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- *
  * @author Buba
  */
 public abstract class CookiesOperations {
@@ -37,10 +36,10 @@ public abstract class CookiesOperations {
 
     public Cookie getCookieByName(String cookieName) {
         Cookie[] cookiesArray = getRequest().getCookies();
-        
+
         if (cookiesArray != null) {
             List<Cookie> cookiesList = Arrays.asList(cookiesArray);
-            
+
             for (Cookie cookie : cookiesList) {
                 if (cookie.getName().equals(cookieName)) {
                     return cookie;

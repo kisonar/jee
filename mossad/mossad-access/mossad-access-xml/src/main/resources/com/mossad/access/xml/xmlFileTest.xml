@@ -9,18 +9,30 @@
 -->
 
 <gropus>
-    <group name = "group1" type = "group 1 type">
-        <element name ="first element" type="one">
-        </element>
-        <element name ="second elemnt" type="one">
-        </element>
-    </group>
+  <group
+    name="group1"
+    type="group 1 type">
+    <element
+      name="first element"
+      type="one">
+    </element>
+    <element
+      name="second elemnt"
+      type="one">
+    </element>
+  </group>
 
-    <group name = "group 2" type = "group 2 type">
-        <element name ="third" type="type two">
-        </element>
-        <element name ="fourth" type="type two">
-        </element>
-        
-    </group>
+  <group
+    name="group 2"
+    type="group 2 type">
+    <element
+      name="third"
+      type="type two">
+    </element>
+    <element
+      name="fourth"
+      type="type two">
+    </element>
+
+  </group>
 </gropus>

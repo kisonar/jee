@@ -6,7 +6,6 @@ package com.mossad.jpa.lib.domain.user;
 
 import com.mossad.jpa.lib.domain.abstraction.AbstractEntityLite;
 import com.mossad.lib.domain.constants.Constants;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
@@ -14,20 +13,20 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
- *
  * @author mmigdal
  */
 @Entity(name = Constants.MOSSAD_USER_DEF)
 @Table(name = Constants.MOSSAD_USER_DEF)
 @NamedQueries({
     @NamedQuery(name = Constants.LOGIN_USER_BY_EMAIL_AND_PASSWORD,
-    query = "SELECT user FROM mossad_user user WHERE user.email= :"+ Constants.PARAM_EMAIL +" AND user.password = :"+Constants.PARAM_PASSWORD),
+        query = "SELECT user FROM mossad_user user WHERE user.email= :" + Constants.PARAM_EMAIL
+            + " AND user.password = :" + Constants.PARAM_PASSWORD),
     @NamedQuery(name = Constants.QUERY_GET_USER_BY_EMAIL,
-    query = "SELECT user FROM mossad_user user WHERE user.email= :"+Constants.PARAM_EMAIL),
+        query = "SELECT user FROM mossad_user user WHERE user.email= :" + Constants.PARAM_EMAIL),
     @NamedQuery(name = Constants.QUERY_GET_USER_BY_ID,
-    query = "SELECT user FROM mossad_user user WHERE user.id= :"+Constants.PARAM_ID),
+        query = "SELECT user FROM mossad_user user WHERE user.id= :" + Constants.PARAM_ID),
     @NamedQuery(name = Constants.GET_ALL_USERS,
-    query = "SELECT user FROM mossad_user user")
+        query = "SELECT user FROM mossad_user user")
 })
 public class User extends AbstractEntityLite {
 
@@ -65,12 +64,13 @@ public class User extends AbstractEntityLite {
 
     @Override
     public boolean equals(Object object) {
-        
+
         if (!(object instanceof User)) {
             return false;
         }
         User other = (User) object;
-        if ((this.getId() == null && other.getId() != null) || (this.getId() != null && !this.getId().equals(other.getId()))) {
+        if ((this.getId() == null && other.getId() != null) || (this.getId() != null && !this.getId()
+            .equals(other.getId()))) {
             return false;
         }
         return true;
@@ -82,6 +82,7 @@ public class User extends AbstractEntityLite {
     }
 
     //==========================================================================
+
     /**
      * @return the userSurname
      */
@@ -126,6 +127,7 @@ public class User extends AbstractEntityLite {
     this.login = userLogin;
     }
      */
+
     /**
      * @return the password
      */

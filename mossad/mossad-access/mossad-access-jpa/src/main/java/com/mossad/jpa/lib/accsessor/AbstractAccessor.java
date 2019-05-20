@@ -8,15 +8,14 @@ package com.mossad.jpa.lib.accsessor;
 import javax.persistence.EntityManager;
 
 /**
- *
  * @author mmigdal
  */
 public abstract class AbstractAccessor {
-    
-    protected  EntityManager em;
-    
-    public  AbstractAccessor (EntityManager em){
+
+    protected EntityManager em;
+
+    public AbstractAccessor(EntityManager em) {
         this.em = em;
     }
-    
+
 }

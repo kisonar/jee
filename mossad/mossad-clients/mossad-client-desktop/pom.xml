@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>mossad</groupId>
-        <artifactId>mossad-clients</artifactId>   
-        <version>1.0-SNAPSHOT</version>
-    </parent>  
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>mossad-client-desktop</artifactId>
+  <groupId>mossad</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>mossad-client-desktop-app</module>
+  </modules>
+  <name>mossad-client-desktop</name>
+  <packaging>pom</packaging>
+  <parent>
+    <artifactId>mossad-clients</artifactId>
     <groupId>mossad</groupId>
-    <artifactId>mossad-client-desktop</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>mossad-client-desktop</name>
-    <modules>
-        <module>mossad-client-desktop-app</module> 
-    </modules>
+  </parent>
+  <version>1.0-SNAPSHOT</version>
 </project>

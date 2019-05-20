@@ -6,10 +6,15 @@
 package com.mossad.osgi.bundle.library;
 
 /**
- *
  * @author mmigdal
  */
 public class BundleLibraryObject {
+
+    private String name;
+
+    public BundleLibraryObject(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -19,13 +24,5 @@ public class BundleLibraryObject {
         this.name = name;
     }
 
-    public BundleLibraryObject(String name) {
-        this.name = name;
-    }
-    
-    private String name;
-    
-    
-    
-    
+
 }

@@ -13,7 +13,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- *
  * @author Piotr Babij
  */
 @ManagedBean(name = "logInRequestBean")
@@ -35,11 +34,10 @@ public class LogInRequestBean implements Serializable {
         try {
             request.login(email, password);
             // TODO: (?) get some additional user data from EJBs
-            
+
             logInBean.setLoggedIn(true);
             logInBean.setUserName(email);
             logInBean.setPassword(password);
-          
 
             // if user got to the login form by redirection -> go to that page after authentication
             // if not (if user got here by typing login.jsf in the address bar) -> go to default page
@@ -48,14 +46,16 @@ public class LogInRequestBean implements Serializable {
             }
             externalContext.redirect(from);
         } catch (IOException ex) {
-            Logger.getLogger(LogInRequestBean.class.getName()).log(Level.SEVERE, "Redirection to " + from + " failed", ex);
+            Logger.getLogger(LogInRequestBean.class.getName())
+                .log(Level.SEVERE, "Redirection to " + from + " failed", ex);
         } catch (ServletException ex) {
-            Logger.getLogger(LogInBean.class.getName()).log(Level.SEVERE, "Login failed: " + email + " " + password, ex);
+            Logger.getLogger(LogInBean.class.getName())
+                .log(Level.SEVERE, "Login failed: " + email + " " + password, ex);
 
             logInBean.setLoggedIn(false);
         }
     }
-    
+
     public void logOut() {
         final ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
         final HttpServletRequest request = (HttpServletRequest) externalContext.getRequest();
@@ -71,12 +71,12 @@ public class LogInRequestBean implements Serializable {
         return password;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     public void setEmail(String userName) {

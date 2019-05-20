@@ -4,11 +4,10 @@
  */
 package com.mossad.jap.lib.factories;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
- *
  * @author mmigdal
  */
 public class TaskFactoryTest {

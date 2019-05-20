@@ -12,27 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperLocal;
-import com.mossad.irp.interfaces.task.IServiceTaskLocal;
-import com.mossad.irp.interfaces.user.IServiceUserLocal;
-import com.mossad.jpa.lib.domain.abstraction.AbstractEntity;
-import com.mossad.jpa.lib.domain.task.Task;
-import com.mossad.jpa.lib.domain.task.TaskPriority;
-import com.mossad.jpa.lib.domain.task.TaskStatus;
-import com.mossad.jpa.lib.domain.task.TaskType;
-import java.util.ArrayList;
-import java.util.List;
-import javax.ejb.EJB;
-
 /**
- *
  * @author mmigdal
  */
 @WebServlet(name = "ServletMossadAdmin", urlPatterns = {"/ServletMossadAdmin"})
 public class ServletMossadAdmin extends HttpServlet {
 
-    private UserTableBuilder userTableBuilder = new UserTableBuilder();
     private static final long serialVersionUID = 1L;
+    private UserTableBuilder userTableBuilder = new UserTableBuilder();
     //@EJB
     //private IServiceUserLocal serviceUser;
     //@EJB
@@ -51,12 +38,12 @@ public class ServletMossadAdmin extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
         PrintWriter out = response.getWriter();
         try {
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -91,28 +78,23 @@ public class ServletMossadAdmin extends HttpServlet {
                 System.out.println(task.getStatus());
                 System.out.println(task.getType());
             }
-            */    
+            */
             out.println("</body>");
             out.println("</html>");
 
-       
 
+        } catch (Exception e) {
 
-        }
-        catch (Exception e){
-            
-           String error =  e.getLocalizedMessage();
-            
-        }
-        
-        
-        finally {
+            String error = e.getLocalizedMessage();
+
+        } finally {
             out.flush();
             out.close();
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP
      * <code>GET</code> method.
@@ -124,7 +106,7 @@ public class ServletMossadAdmin extends HttpServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         processRequest(request, response);
     }
 
@@ -139,7 +121,7 @@ public class ServletMossadAdmin extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException {
         processRequest(request, response);
     }
 

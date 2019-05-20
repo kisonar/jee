@@ -7,7 +7,6 @@ package com.mossad.lib.domain.task;
 import java.io.Serializable;
 
 /**
- *
  * @author mmigdal
  */
 public final class TaskAttributes implements Serializable {

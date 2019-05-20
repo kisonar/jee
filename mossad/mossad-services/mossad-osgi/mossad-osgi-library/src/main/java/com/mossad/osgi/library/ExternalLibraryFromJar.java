@@ -6,12 +6,18 @@
 package com.mossad.osgi.library;
 
 /**
- *
  * @author mmigdal
  */
 public class ExternalLibraryFromJar {
 
     private String name;
+
+    public ExternalLibraryFromJar() {
+    }
+
+    public ExternalLibraryFromJar(String name) {
+        this.name = name;
+    }
 
     /**
      * Get the value of name
@@ -31,11 +37,4 @@ public class ExternalLibraryFromJar {
         this.name = name;
     }
 
-    public ExternalLibraryFromJar() {
-    }
-    
-    public ExternalLibraryFromJar(String name) {
-        this.name = name;
-    }
-    
 }

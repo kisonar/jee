@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>mossad-access</artifactId>
 
 
-    <parent>
-        <groupId>mossad</groupId>
-        <artifactId>mossad-parent</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>mossad-access</artifactId>
-    <name>${project.artifactId}</name>
-    <packaging>pom</packaging>
+  <modules>
+    <module>mossad-access-jpa</module>
+    <module>mossad-access-jpa-local-config</module>
+    <module>mossad-access-jpa-test-data</module>
+    <!--TODO to remove -->
+    <module>mossad-access-xml</module>
+  </modules>
+  <name>${project.artifactId}</name>
+  <packaging>pom</packaging>
 
-    <modules>
-        <module>mossad-access-jpa</module>
-        <module>mossad-access-jpa-local-config</module>
-        <module>mossad-access-jpa-test-data</module>
-        <!--TODO to remove -->
-        <module>mossad-access-xml</module>
-    </modules>
+  <parent>
+    <artifactId>mossad-parent</artifactId>
+    <groupId>mossad</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 </project>

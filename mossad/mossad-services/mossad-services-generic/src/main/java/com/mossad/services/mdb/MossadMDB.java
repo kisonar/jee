@@ -4,20 +4,16 @@
  */
 package com.mossad.services.mdb;
 
+import com.mossad.lib.domain.constants.Constants;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.ejb.MessageDrivenContext;
-
 import javax.jms.Message;
 import javax.jms.MessageListener;
 
-import com.mossad.lib.domain.constants.Constants;
-
 /**
- *
  * @author mmigdal
  */
 @MessageDriven(mappedName = Constants.JMS_MAPPING_NAME_QUEUE, activationConfig = {

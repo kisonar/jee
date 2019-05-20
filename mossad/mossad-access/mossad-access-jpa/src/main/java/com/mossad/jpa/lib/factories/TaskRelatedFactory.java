@@ -9,20 +9,18 @@ import com.mossad.jpa.lib.domain.task.TaskStatus;
 import com.mossad.jpa.lib.domain.task.TaskType;
 
 /**
- *
  * @author mmigdal
  */
 public class TaskRelatedFactory {
 
     private TaskType taskType;
     private TaskStatus taskStatus;
-    
+
     private TaskPriority taskPriority;
-    
+
     public TaskRelatedFactory() {
     }
-    
-    
+
 
     public TaskType createTaskType(String value) {
 
@@ -32,7 +30,7 @@ public class TaskRelatedFactory {
 
     }
 
-    
+
     public TaskStatus createTaskStatus(String value) {
 
         taskStatus = new TaskStatus();
@@ -40,12 +38,12 @@ public class TaskRelatedFactory {
         return taskStatus;
 
     }
-     
-    public TaskPriority createTaskPriority(String value){
+
+    public TaskPriority createTaskPriority(String value) {
         taskPriority = new TaskPriority();
         taskPriority.setValue(value);
         return taskPriority;
-    
+
     }
- 
+
 }
