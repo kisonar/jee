@@ -12,8 +12,6 @@ import javax.annotation.PreDestroy;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.jws.WebMethod;
-import javax.jws.WebService;
 
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.exceptions.user.UserExistsException;
@@ -34,7 +32,6 @@ import javax.ejb.Remote;
 // (name=Constants.BINDING_SERVICE_USER,mappedName=Constants.BINDING_SERVICE_USER)
 @Remote(IServiceUserRemote.class)
 @Local(IServiceUserLocal.class)
-@WebService()
 public class ServiceUser implements IServiceUserLocal, IServiceUserRemote 
 {
 
@@ -59,14 +56,12 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote
     }
 
     @Override
-    @WebMethod
     public User loginUser(String email, String password)
             throws UserNotFoundException {
 
         return userAccessor.loginUser(email, password);
     }
 
-    @WebMethod
     @Override
     public User getById(Long id) throws UserNotFoundException {
 
