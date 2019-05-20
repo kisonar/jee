@@ -11,6 +11,6 @@ import javax.ejb.Remote;
  * @author mmigdal
  */
 @Remote
-public interface IServiceTaskRemote extends IServiceTaskLocal {
+public interface IServiceTaskRemote extends IServiceTask {
 
 }

@@ -11,6 +11,6 @@ import javax.ejb.Remote;
  * @author mmigdal
  */
 @Remote
-public interface IVerificationInterfaceRemote extends IVerificationInterfaceLocal {
+public interface IVerificationInterfaceRemote extends IVerificationInterface {
 
 }

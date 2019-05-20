@@ -20,19 +20,14 @@ import javax.naming.NamingException;
 public class ServiceLocator implements IServiceLocator {
 
     private static final Logger log = Logger.getLogger(Constants.SERVICE_LOCATOR);
-    InitialContext ctx;
+    private InitialContext ctx;
 
     public ServiceLocator() {
-
         try {
             ctx = new InitialContext();
-
-
         } catch (Exception e) {
             log.log(Level.FINEST, "Error during initialization of Service Locator: {0}", e.getMessage());
         }
-
-
     }
 
     public ServiceLocator(Properties props) {
@@ -45,20 +40,15 @@ public class ServiceLocator implements IServiceLocator {
 
     @Override
     public IServiceTask getServiceTask() throws NamingException {
-
         IServiceTask serviceTask =
             (IServiceTask) ctx.lookup(Constants.BINDING_SERVICE_TASK);
         return serviceTask;
-
-
     }
 
     @Override
     public IServiceUser getServiceUser() throws NamingException {
-
         IServiceUser serviceUser =
             (IServiceUser) ctx.lookup(Constants.BINDING_SERVICE_USER);
-
         return serviceUser;
     }
 
@@ -68,15 +58,9 @@ public class ServiceLocator implements IServiceLocator {
         IServiceTaskHelperRemote serviceTaskHelper = (IServiceTaskHelperRemote) ctx
             .lookup(Constants.BINDING_SERVICE_HELPER);
         return serviceTaskHelper;
-
     }
 
     public Object getService(String serviceName) throws NamingException {
-
         return ctx.lookup(serviceName);
-
-
     }
-
-
 }
