@@ -10,7 +10,6 @@ import java.io.PrintWriter;
 import java.util.List;
 
 /**
- *
  * @author mmigdal
  */
 class UserTableBuilder {
@@ -25,7 +24,7 @@ class UserTableBuilder {
             out.println("<table border=\"1\" cellpadding=\"5\" >");
             out.println("<caption>Users table</caption>");
             out.println(
-                    "<th>Name</th>"
+                "<th>Name</th>"
                     + "<th>Surname</th>"
                     + "<th>email</th>"
                     + "<th>password</th>"
@@ -33,7 +32,7 @@ class UserTableBuilder {
             );
 
             for (User user : users) {
-                
+
                 out.println("<tr>");
                 geneateCellEntry(out, user.getName());
                 geneateCellEntry(out, user.getSurname());
@@ -71,9 +70,8 @@ class UserTableBuilder {
         out.println("<td>");
         out.println(value);
         out.println("</td>");
-		
-		
-		
+
+
     }
 
 }

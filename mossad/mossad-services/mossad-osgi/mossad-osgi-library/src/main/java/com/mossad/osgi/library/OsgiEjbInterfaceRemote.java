@@ -9,14 +9,13 @@ import javax.annotation.security.PermitAll;
 import javax.ejb.Remote;
 
 /**
- *
  * @author mmigdal
  */
 @PermitAll
 @Remote
-public interface OsgiEjbInterfaceRemote  {
+public interface OsgiEjbInterfaceRemote {
 
-   @PermitAll
-   String doTheNeedful(String input);
+    @PermitAll
+    String doTheNeedful(String input);
 
 }

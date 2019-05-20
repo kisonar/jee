@@ -8,7 +8,6 @@ package com.mossad.irp.interfaces;
 import javax.ejb.Remote;
 
 /**
- *
  * @author mmigdal
  */
 @Remote

@@ -4,13 +4,12 @@
  */
 package com.mossad.jpa.test.data;
 
-import com.mossad.jpa.lib.factories.UserFactory;
 import com.mossad.jpa.lib.domain.user.User;
+import com.mossad.jpa.lib.factories.UserFactory;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
  * @author mmigdal
  */
 public class UsersContainer {
@@ -28,11 +27,12 @@ public class UsersContainer {
         users = new HashSet();
     }
 
-    private  void populate() {
+    private void populate() {
 
         for (int number = 0; number < TestDataConsts.NUMBER_OF_USERS; number++) {
 
-            User user = userFactory.createUser(Integer.toString(number) + name, Integer.toString(number) + surname, Integer.toString(number) + password, Integer.toString(number) + email);
+            User user = userFactory.createUser(Integer.toString(number) + name, Integer.toString(number) + surname,
+                Integer.toString(number) + password, Integer.toString(number) + email);
             users.add(user);
         }
 

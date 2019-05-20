@@ -6,14 +6,13 @@
 package com.mossad.osgi.budle;
 
 /**
- *
  * @author mmigdal
  */
 public interface UserAuthService {
-    
-    boolean login (String user, String password);
-    
-    boolean register (String user, String password);
-    
-    
+
+    boolean login(String user, String password);
+
+    boolean register(String user, String password);
+
+
 }

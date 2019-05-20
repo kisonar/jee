@@ -10,7 +10,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 /**
- *
  * @author mmigdal
  */
 @Entity
@@ -19,7 +18,7 @@ public abstract class AbstractEntity extends AbstractEntityLite //implements IEn
 {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Column(name = "val")
     private String val;
 

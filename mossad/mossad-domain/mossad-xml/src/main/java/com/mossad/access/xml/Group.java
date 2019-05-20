@@ -4,10 +4,10 @@
  */
 package com.mossad.access.xml;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- *
  * @author Administrator
  */
 public final class Group extends Element {
@@ -25,15 +25,15 @@ public final class Group extends Element {
         return elements;
     }
 
-    public void addElement(Element item) {
-        elements.add(item);
-    }
-
     /**
      * @param elements the elements to set
      */
     public void setElements(List<Element> elements) {
         this.elements = elements;
+    }
+
+    public void addElement(Element item) {
+        elements.add(item);
     }
 
 }

@@ -4,10 +4,9 @@
  */
 package com.mossad.access.xml;
 
-import java.util.*;
+import java.util.List;
 
 /**
- *
  * @author Administrator
  */
 public class Main {

@@ -10,14 +10,13 @@ import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.factories.TaskFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.task.TaskAttributes;
-
+import java.util.List;
+import java.util.logging.Logger;
 import javax.ejb.Local;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.List;
-import java.util.logging.Logger;
 
 
 /**
@@ -63,14 +62,16 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
 
     @Override
     public Task getTask(Long taskId) {
-        Task task = (Task) em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_TASK_BY_TASK_ID).setParameter(Constants.PARAM_TASK_ID, taskId).getSingleResult();
+        Task task = (Task) em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_TASK_BY_TASK_ID)
+            .setParameter(Constants.PARAM_TASK_ID, taskId).getSingleResult();
         return task;
     }
 
     @Override
     public List<Task> getTasks(Long userId) {
 
-        List<Task> tasks = em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_USER_TASKS).setParameter(Constants.PARAM_USER_ID, userId).getResultList();
+        List<Task> tasks = em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_USER_TASKS)
+            .setParameter(Constants.PARAM_USER_ID, userId).getResultList();
 
         return tasks;
 
@@ -91,7 +92,6 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
             long priority = taskAttributes.getPriority();
             long type = taskAttributes.getType();
 
-
             if (title != null) {
                 task.setTitle(null);
             }
@@ -100,14 +100,17 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
                 task.setDescription(description);
             }
 
-            if (status != 0)
+            if (status != 0) {
                 task.setStatus(status);
+            }
 
-            if (priority != 0)
+            if (priority != 0) {
                 task.setPriority(priority);
+            }
 
-            if (type != 0)
+            if (type != 0) {
                 task.setType(type);
+            }
 
             em.persist(task);
 

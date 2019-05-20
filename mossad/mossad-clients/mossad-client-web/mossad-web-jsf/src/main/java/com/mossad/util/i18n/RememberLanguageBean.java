@@ -11,15 +11,14 @@ import javax.faces.bean.SessionScoped;
 import javax.servlet.http.Cookie;
 
 /**
- * 
  * @author Buba
  */
 @ManagedBean(name = "rememberLanguageBean")
 @SessionScoped
 public class RememberLanguageBean extends CookiesOperations implements Serializable {
 
-    private String language = "";
     private static final String LANGUAGE_COOKIE_NAME = "i18nMSDLanguageCookie";
+    private String language = "";
 
     public RememberLanguageBean() {
         checkLanguageCookie();
@@ -35,6 +34,7 @@ public class RememberLanguageBean extends CookiesOperations implements Serializa
 
     /**
      * Saves selected language to cookie.
+     *
      * @param language Language String
      */
     public void saveLanguageToCookie(String language) {

@@ -1,22 +1,24 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>mossad</groupId>  
-        <artifactId>mossad-domain</artifactId>         
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    
-    <artifactId>mossad-lib</artifactId>
-    <name>${project.artifactId}</name>
+<project
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <dependencies> 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-        </dependency>
-    </dependencies>
+  <artifactId>mossad-lib</artifactId>
+  <dependencies>
+    <dependency>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+    </dependency>
+  </dependencies>
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>${project.artifactId}</name>
+
+  <parent>
+    <artifactId>mossad-domain</artifactId>
+    <groupId>mossad</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 
 </project>

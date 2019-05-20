@@ -5,9 +5,9 @@
 package com.mossad.irp.interfaces.task;
 
 /**
- *
  * @author mmigdal
  */
+
 import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.lib.domain.task.TaskAttributes;
 import java.util.List;

@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>mossad-services</artifactId>
-        <groupId>mossad</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>mossad-services-generic</artifactId>
-    <packaging>jar</packaging>
-    <name>${project.artifactId}</name>
-    <dependencies>
-        <dependency>
-            <groupId>jakarta.persistence</groupId>
-            <artifactId>jakarta.persistence-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.jms</groupId>
-            <artifactId>jakarta.jms-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.annotation</groupId>
-            <artifactId>jakarta.annotation-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>mossad</groupId>
-            <artifactId>mossad-irp</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>mossad-services-generic</artifactId>
+  <dependencies>
+    <dependency>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <groupId>jakarta.persistence</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>jakarta.jms-api</artifactId>
+      <groupId>jakarta.jms</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>jakarta.annotation-api</artifactId>
+      <groupId>jakarta.annotation</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>mossad-irp</artifactId>
+      <groupId>mossad</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+  <modelVersion>4.0.0</modelVersion>
+  <name>${project.artifactId}</name>
+  <packaging>jar</packaging>
+  <parent>
+    <artifactId>mossad-services</artifactId>
+    <groupId>mossad</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
 </project>

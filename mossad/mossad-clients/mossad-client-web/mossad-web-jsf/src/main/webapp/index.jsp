@@ -1,44 +1,34 @@
-<%@page import="com.mossad.jpa.lib.user.User"%>
-<%@page import="com.mossad.jpa.lib.task.TaskType"%>
-<%@page import="com.mossad.jpa.lib.task.TaskStatus"%>
-<%@page import="com.mossad.jpa.lib.task.TaskPriority"%>
-<%@page import="com.mossad.lib.domain.task.TaskAttributes"%>
-<%@page import="com.mossad.jpa.lib.task.Task"%>
-<%@page import="com.mossad.lib.domain.constants.Constants"%>
-
-<%@page import="java.util.List"%>
-<%@page import="javax.naming.InitialContext"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="javax.naming.Context" %>
-<%@page import="javax.naming.NamingException" %>
+<%@page import="com.mossad.irp.interfaces.IServiceTaskHelperRemote" %>
 <%@page import="com.mossad.irp.interfaces.IServiceTaskRemote" %>
 <%@page import="com.mossad.irp.interfaces.IServiceUser" %>
-<%@page import="com.mossad.irp.interfaces.IServiceTaskHelperRemote" %>
-<%@page import="com.mossad.irp.servicelocator.IServiceLocator"  %>
-<%@page import="com.mossad.irp.servicelocator.ServiceLocator"  %>
-<%@page import="java.sql.Connection"%>
-<%@page import="javax.sql.DataSource"%>
+<%@page import="com.mossad.jpa.lib.task.Task" %>
+<%@page import="com.mossad.jpa.lib.task.TaskPriority" %>
+<%@page import="com.mossad.jpa.lib.task.TaskStatus" %>
+<%@page import="com.mossad.jpa.lib.task.TaskType" %>
+
+<%@page import="com.mossad.jpa.lib.user.User" %>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World from JSP not JSF!</h1>
-        
-        
-        <%
-                
-                    /*
-                    IServiceLocator sl = new ServiceLocator();             
-                    IServiceTask serviceTask = sl.getServiceTask();
-                    IServiceUser serviceUser = sl.getServiceUser();            
-                    IServiceTaskHelper serviceTaskHelper = sl.getServiceTaskHelper();
-                    */
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>JSP Page</title>
+</head>
+<body>
+<h1>Hello World from JSP not JSF!</h1>
+
+
+<%
+
+    /*
+    IServiceLocator sl = new ServiceLocator();
+    IServiceTask serviceTask = sl.getServiceTask();
+    IServiceUser serviceUser = sl.getServiceUser();
+    IServiceTaskHelper serviceTaskHelper = sl.getServiceTaskHelper();
+    */
      
                     /*
                      String email ="mail 1111";
@@ -134,8 +124,8 @@
                          
                      }
                      */
-                    
-                    // TaskPriority
+
+    // TaskPriority
                      /*
                      List<TaskPriority> taskPriorities =   serviceTaskHelper.getTaskPriorities();
                
@@ -146,8 +136,8 @@
                          
                      }
                      */
-               
-                     //Task
+
+    //Task
                
                     /* 
                     TaskAttributes taskAttributes = new TaskAttributes();
@@ -176,10 +166,10 @@
                      Connection con = ds.getConnection();
                      con.close();
                      */
-                     
-                     
-              %>          
-        
-        
-    </body>
+
+
+%>
+
+
+</body>
 </html>

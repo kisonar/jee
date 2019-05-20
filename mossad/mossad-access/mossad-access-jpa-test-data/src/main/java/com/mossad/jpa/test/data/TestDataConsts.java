@@ -5,12 +5,11 @@
 package com.mossad.jpa.test.data;
 
 /**
- *
  * @author mmigdal
  */
 public final class TestDataConsts {
-    
-    public final static int NUMBER_OF_USERS=10;
-    
-    
+
+    public final static int NUMBER_OF_USERS = 10;
+
+
 }

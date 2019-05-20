@@ -14,7 +14,6 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 /**
- *
  * @author mmigdal
  */
 @Entity
@@ -22,12 +21,12 @@ import javax.persistence.InheritanceType;
 public abstract class AbstractEntityLite implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    
+
     public AbstractEntityLite() {
     }
 

@@ -4,20 +4,16 @@
  */
 package com.mossad.jpa.test;
 
+import com.mossad.jpa.lib.domain.user.User;
 import com.mossad.jpa.test.data.DomainTestData;
+import com.mossad.lib.domain.constants.Constants;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import com.mossad.jpa.lib.domain.user.User;
-import com.mossad.lib.domain.constants.Constants;
-
-
 
 /**
- *
  * @author mmigdal
  */
 public class TesterUser {
@@ -26,7 +22,7 @@ public class TesterUser {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         List<User> usersSource = null;
         List<User> usersResult = null;
 
@@ -58,9 +54,9 @@ public class TesterUser {
             em.close();
         }
 
-
         em = emf.createEntityManager();
-        usersResult = em.createNamedQuery(Constants.QUERY_GET_USER_BY_ID).setParameter(Constants.PARAM_ID, 1).getResultList();
+        usersResult = em.createNamedQuery(Constants.QUERY_GET_USER_BY_ID).setParameter(Constants.PARAM_ID, 1)
+            .getResultList();
 
         System.out.println(Constants.separator);
 
