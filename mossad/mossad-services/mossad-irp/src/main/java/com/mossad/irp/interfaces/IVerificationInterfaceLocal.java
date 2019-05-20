@@ -12,7 +12,6 @@ import javax.ejb.Local;
  */
 
 @Local
-public interface IVerificationInterfaceLocal {
+public interface IVerificationInterfaceLocal extends IVerificationInterface {
 
-    void verify();
 }
