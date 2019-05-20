@@ -20,7 +20,6 @@ import javax.naming.NamingException;
 
 //import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
 import com.mossad.irp.servicelocator.ServiceLocator;
-import javax.inject.Inject;
 
 /**
  *

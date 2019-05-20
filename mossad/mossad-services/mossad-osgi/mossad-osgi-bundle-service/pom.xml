@@ -21,11 +21,7 @@
         <dependency>
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.core</artifactId>           
-        </dependency>  
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-        </dependency>              
+        </dependency>
         <dependency>
             <groupId>mossad</groupId>
             <artifactId>mossad-osgi-library</artifactId>
@@ -38,17 +34,13 @@
         </dependency>  
     </dependencies>
 
-    <build>       
-           
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>     
-                       
+                <extensions>true</extensions>
                 <configuration>
-                    
-                    
                     <instructions>
                         <Bundle-Activator>com.mossad.osgi.budle.service.OsgiBundleServiceActivator</Bundle-Activator>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>  

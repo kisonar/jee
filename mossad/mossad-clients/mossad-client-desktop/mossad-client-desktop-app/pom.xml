@@ -14,11 +14,11 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  <dependencies>   
+  <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>        
-        </dependency>                
+          <groupId>jakarta.jms</groupId>
+          <artifactId>jakarta.jms-api</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -28,41 +28,5 @@
             <artifactId>mossad-irp</artifactId>
             <version>1.0-SNAPSHOT</version>                 
         </dependency>
-        
-        <!-- GlassFish related-->
-        <!--
-        <dependency>
-            <groupId>org.glassfish.extras</groupId>
-            <artifactId>appserv-rt</artifactId>
-            <version>3.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.glassfish.security</groupId>
-            <artifactId>ejb.security</artifactId>
-            <version>3.1.1</version>
-        </dependency>
-        -->
-
-        <!-- above ones could be replaced by this one below but Jenbkins cannot download it somehow, why ? -->
-        <!--
-        <dependency>
-            <groupId>org.glassfish.appclient</groupId>
-            <artifactId>gf-client-module</artifactId>
-            <version>3.0.1-b01</version>
-        </dependency>
-        
-        <dependency>
-            <groupId>org.glassfish.appclient</groupId>
-            <artifactId>gf-client</artifactId>
-            <version>3.1.1</version>
-        </dependency>
-             
-      <dependency>
-          <groupId>org.glassfish.appclient</groupId>
-          <artifactId>client</artifactId>
-          <version>3.1.1</version>
-      </dependency>
-        -->
     </dependencies>
 </project>
