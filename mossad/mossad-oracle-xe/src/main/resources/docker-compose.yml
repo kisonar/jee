@@ -1,0 +1,16 @@
+version: '3.1'
+
+services:
+
+  db-oracle-xe:
+    name: oracle-xe-mossad
+    image: oracle/database:19.3.0-ee
+    ports:
+      - 1521:1521
+    volumes:
+      - ./oracle:/u01/app/oracle
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - WEB_CONSOLE=true
+      - ORACLE_SID=xe
+
