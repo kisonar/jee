@@ -11,4 +11,8 @@ services:
       - processes=200
       - DATABASES=sample
     volumes:
-      - ./oracle:/u01/app/oracle
+      - ./oracle:/u01/app/oracle/oradata
+      - ./oracle-sql:/u01/app/oracle/scripts/startup
+
+
+#system/oracle

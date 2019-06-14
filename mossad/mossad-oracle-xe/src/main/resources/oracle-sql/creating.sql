@@ -1,7 +1,3 @@
---- as system only once
-CREATE BIGFILE TABLESPACE mossad
-  DATAFILE 'mossad.dat'
-  SIZE 20M AUTOEXTEND ON;
 
 -- as system user
 CREATE USER mossad
