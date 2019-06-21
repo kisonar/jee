@@ -3,6 +3,8 @@
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
+  <modelVersion>4.0.0</modelVersion>
+
   <parent>
     <artifactId>mossad-parent</artifactId>
     <groupId>mossad</groupId>
@@ -11,7 +13,6 @@
 
   <artifactId>mossad-ear</artifactId>
   <packaging>ear</packaging>
-  <modelVersion>4.0.0</modelVersion>
 
   <properties>
     <netbeans.hint.deploy.server>gfv4ee7</netbeans.hint.deploy.server>
