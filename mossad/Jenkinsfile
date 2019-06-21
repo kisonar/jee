@@ -11,13 +11,13 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                mvn compile
+                mvn install
             }
         }
-        stage('Test') {
+        stage('Done..') {
             steps {
-                echo 'Testing....'
-                mvn test
+                echo 'Done....'
+
             }
         }
     }
