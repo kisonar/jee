@@ -24,7 +24,6 @@
     <module>mossad-services</module>
     <module>mossad-clients</module>
     <module>mossad-ear</module>
-    <module>mossad-db</module>
   </modules>
 
   <dependencyManagement>
