@@ -18,12 +18,13 @@
   </properties>
 
   <modules>
-    <module>mossad-oracle-xe</module>
+    <module>mossad-db</module>
     <module>mossad-domain</module>
     <module>mossad-access</module>
     <module>mossad-services</module>
     <module>mossad-clients</module>
     <module>mossad-ear</module>
+    <module>mossad-db</module>
   </modules>
 
   <dependencyManagement>
