@@ -2,24 +2,20 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>mossad-access</artifactId>
-
 
   <modelVersion>4.0.0</modelVersion>
 
-  <modules>
-    <module>mossad-access-jpa</module>
-    <module>mossad-access-jpa-local-config</module>
-    <module>mossad-access-jpa-test-data</module>
-    <!--TODO to remove -->
-    <module>mossad-access-xml</module>
-  </modules>
-  <name>${project.artifactId}</name>
-  <packaging>pom</packaging>
-
   <parent>
-    <artifactId>mossad-parent</artifactId>
     <groupId>mossad</groupId>
+    <artifactId>mossad-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+
+  <artifactId>mossad-access</artifactId>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>mossad-access-jpa</module>
+  </modules>
+
 </project>

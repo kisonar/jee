@@ -2,7 +2,23 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>mossad-client-web</artifactId>
+    <groupId>mossad</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
   <artifactId>mossad-web-jsf</artifactId>
+  <packaging>war</packaging>
+
+  <properties>
+    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
   <dependencies>
     <dependency>
       <artifactId>jakarta.servlet-api</artifactId>
@@ -18,17 +34,5 @@
       <version>1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
-  <modelVersion>4.0.0</modelVersion>
-  <name>${project.artifactId}</name>
-  <packaging>war</packaging>
-  <parent>
-    <artifactId>mossad-client-web</artifactId>
-    <groupId>mossad</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <properties>
-    <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <version>1.0-SNAPSHOT</version>
+
 </project>
