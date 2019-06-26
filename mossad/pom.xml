@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <jaxrs.version>2.27</jaxrs.version>
+    <jaxrs.version>2.29</jaxrs.version>
     <jee.version>9.0</jee.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -93,7 +93,7 @@
         <artifactId>junit-jupiter-engine</artifactId>
         <groupId>org.junit.jupiter</groupId>
         <scope>test</scope>
-        <version>5.3.2</version>
+        <version>5.5.0-RC2</version>
       </dependency>
       <!-- OSGI -->
       <dependency>
@@ -249,7 +249,7 @@
                 <version>1.8</version>
               </requireJavaVersion>
               <requireMavenVersion>
-                <version>3.5.0</version>
+                <version>3.6.0</version>
               </requireMavenVersion>
               <!--
               <requireOS>
@@ -267,6 +267,7 @@
 
   <profiles>
     <profile>
+	  <id>uml</id>
       <build>
         <pluginManagement>
           <plugins>
@@ -292,7 +293,6 @@
           </plugins>
         </pluginManagement>
       </build>
-      <id>uml</id>
     </profile>
   </profiles>
   <!--
