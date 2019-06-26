@@ -8,16 +8,33 @@ pipeline {
                 mvn clean
             }
         }
+
+    	stage('Check updates for plugins') {
+            steps {
+                echo 'Check for plugins updates'
+                mvn versions:display-plugin-updates
+            }
+        }
+
+	stage('Check updates for dependencies') {
+            steps {
+                echo 'Check for dependenices updates'
+                mvn  versions:display-dependency-updates
+            }
+        }
+
         stage('Build') {
             steps {
                 echo 'Building..'
                 mvn install
             }
         }
+
+	
+
         stage('Done..') {
             steps {
                 echo 'Done....'
-
             }
         }
     }
