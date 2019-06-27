@@ -15,7 +15,7 @@
     <jee.version>9.0</jee.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
+  </properties>	
 
   <modules>
     <module>mossad-db</module>
@@ -131,108 +131,34 @@
   </dependencyManagement>
 
   <build>
+  
+	<!-- execute at parent pom check -->
+	<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+	  </plugin>	
+	  <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>                 
+        </plugin>
+	  <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>               
+      </plugin>
+	  <plugin>
+          <!-- insert git hash id -->
+		  <groupId>pl.project13.maven</groupId>
+          <artifactId>git-commit-id-plugin</artifactId>         
+        </plugin>
+	</plugins>
+  
     <pluginManagement>
       <plugins>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.3</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <configuration>
-            <detail>true</detail>
-            <printSummary>true</printSummary>
-          </configuration>
-          <version>3.0.0-M2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-            <archive>
-              <addMavenDescriptor>false</addMavenDescriptor>
-              <manifestEntries>
-                <SCM-Revision>${buildNumber}</SCM-Revision>
-                <buildTime>${maven.build.timestamp}</buildTime>
-              </manifestEntries>
-            </archive>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-ejb-plugin</artifactId>
-          <configuration>
-            <ejbVersion>3.1</ejbVersion>
-            <generateClient>true</generateClient>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>2.5.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-war-plugin</artifactId>
-          <configuration>
-            <archive>
-              <addMavenDescriptor>false</addMavenDescriptor>
-            </archive>
-            <failOnMissingWebXml>false</failOnMissingWebXml>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.2.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-ear-plugin</artifactId>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.0.0</version>
-        </plugin>
-        <!-- OSGi -->
-        <plugin>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <groupId>org.apache.felix</groupId>
-          <version>2.5.4</version>
-        </plugin>
-        <!-- Add SVN revision to metadata against mvn package-->
-        <plugin>
-          <artifactId>buildnumber-maven-plugin</artifactId>
-          <configuration>
-            <doCheck>false</doCheck>
-            <doUpdate>true</doUpdate>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>create</goal>
-              </goals>
-              <phase>validate</phase>
-            </execution>
-          </executions>
-          <groupId>org.codehaus.mojo</groupId>
-        </plugin>
-        <plugin>
-          <!-- insert git hash id -->
-          <artifactId>git-commit-id-plugin</artifactId>
-          <configuration>
-            <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-            <generateGitPropertiesFile>true</generateGitPropertiesFile>
-            <includeOnlyProperties>git.commit.id.abbrev</includeOnlyProperties>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>revision</goal>
-              </goals>
-              <id>get-commit-info</id>
-            </execution>
-          </executions>
-          <groupId>pl.project13.maven</groupId>
-          <version>2.2.4</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-enforcer-plugin</artifactId>
+		<plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>	  
+          <version>3.0.0-M1</version>
           <configuration>
             <rules>
               <bannedPlugins>
@@ -246,10 +172,10 @@
                 </message>
               </bannedPlugins>
               <requireJavaVersion>
-                <version>1.8</version>
+                <version>11</version>
               </requireJavaVersion>
               <requireMavenVersion>
-                <version>3.6.0</version>
+                <version>[3.5.2,)</version>
               </requireMavenVersion>
               <!--
               <requireOS>
@@ -258,11 +184,116 @@
               -->
             </rules>
           </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.0.0-M1</version>
+          
         </plugin>
+        <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+		  <version>3.8.0</version>
+          <configuration>
+            <source>11</source>
+            <target>11</target>
+			<release>11</release>
+          </configuration>                  
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <detail>true</detail>
+            <printSummary>true</printSummary>
+          </configuration>
+          <version>3.0.0-M2</version>
+        </plugin>
+        <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <version>3.1.0</version>
+          <artifactId>maven-jar-plugin</artifactId>
+          <configuration>
+            <archive>
+              <addMavenDescriptor>false</addMavenDescriptor>
+              <manifestEntries>
+                <SCM-Revision>${buildNumber}</SCM-Revision>
+                <buildTime>${maven.build.timestamp}</buildTime>
+				<Build-Jdk>${java.version} (${java.vendor} ${java.vm.version})</Build-Jdk>
+                <Build-Timestamp>${git.build.time}</Build-Timestamp>
+                <Build-Revision>${git.commit.id}</Build-Revision>
+                <Build-OS>${os.name} ${os.arch} ${os.version}</Build-OS>
+              </manifestEntries>
+            </archive>
+          </configuration>         
+        </plugin>
+        <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ejb-plugin</artifactId>
+          <configuration>
+            <ejbVersion>3.1</ejbVersion>
+            <generateClient>true</generateClient>
+          </configuration>          
+          <version>2.5.1</version>
+        </plugin>
+        <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+		  <version>3.2.0</version>
+          <configuration>
+            <archive>
+              <addMavenDescriptor>false</addMavenDescriptor>
+            </archive>
+            <failOnMissingWebXml>false</failOnMissingWebXml>
+          </configuration> 
+        </plugin>
+        <plugin>
+		  <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-ear-plugin</artifactId>     
+          <version>3.0.0</version>
+        </plugin>
+        <!-- OSGi -->
+        <plugin>
+		  <groupId>org.apache.felix</groupId>	
+          <artifactId>maven-bundle-plugin</artifactId> 
+          <version>4.2.0</version>
+        </plugin>
+        <!-- Add SVN revision to metadata against mvn package-->
+        <plugin>
+		  <groupId>org.codehaus.mojo</groupId>
+          <artifactId>buildnumber-maven-plugin</artifactId>
+          <configuration>
+            <doCheck>false</doCheck>
+            <doUpdate>true</doUpdate>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>create</goal>
+              </goals>
+              <phase>validate</phase>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <!-- insert git hash id -->
+		  <groupId>pl.project13.maven</groupId>
+          <artifactId>git-commit-id-plugin</artifactId>
+		  <version>2.2.4</version>
+          <configuration>
+            <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+            <generateGitPropertiesFile>true</generateGitPropertiesFile>
+            <includeOnlyProperties>git.commit.id.abbrev</includeOnlyProperties>
+			<dateFormat>yyyy-MM-dd'T'HH:mm:ss.SSSZ</dateFormat>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>revision</goal>
+              </goals>
+              <id>get-commit-info</id>
+            </execution>
+          </executions>           
+        </plugin>
+        
       </plugins>
     </pluginManagement>
+	
   </build>
 
   <profiles>
