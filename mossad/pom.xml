@@ -148,10 +148,10 @@
                 </message>
               </bannedPlugins>
               <requireJavaVersion>
-                <version>11.0.0.0</version>
+                <version>11</version>
               </requireJavaVersion>
               <requireMavenVersion>
-                <version>[3.6.0,)</version>
+                <version>[3.5.2,)</version>
               </requireMavenVersion>
               <!--
               <requireOS>
