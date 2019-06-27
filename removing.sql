@@ -1,4 +1,0 @@
-drop user MOSSAD cascade;
-
-
-
