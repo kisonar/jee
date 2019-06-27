@@ -136,8 +136,8 @@
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
+            <source>1.11.0</source>
+            <target>1.11.0</target>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
           <version>3.3</version>
@@ -246,10 +246,10 @@
                 </message>
               </bannedPlugins>
               <requireJavaVersion>
-                <version>1.8</version>
+                <version>[1.11.0,)</version>
               </requireJavaVersion>
               <requireMavenVersion>
-                <version>3.6.0</version>
+                <version>[3.6.0,)</version>
               </requireMavenVersion>
               <!--
               <requireOS>
