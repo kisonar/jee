@@ -133,11 +133,41 @@
   <build>
     <pluginManagement>
       <plugins>
+		<plugin>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <configuration>
+            <rules>
+              <bannedPlugins>
+                <!-- will only display a warning but does not fail the build. -->
+                <excludes>
+                  <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
+                </excludes>
+                <level>WARN</level>
+                <message>Please consider using the maven-invoker-plugin
+                  (http://maven.apache.org/plugins/maven-invoker-plugin/)!
+                </message>
+              </bannedPlugins>
+              <requireJavaVersion>
+                <version>11.0.0.0</version>
+              </requireJavaVersion>
+              <requireMavenVersion>
+                <version>[3.6.0,)</version>
+              </requireMavenVersion>
+              <!--
+              <requireOS>
+                  <family>unix</family>
+              </requireOS>
+              -->
+            </rules>
+          </configuration>
+          <groupId>org.apache.maven.plugins</groupId>
+          <version>3.0.0-M1</version>
+        </plugin>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
-            <source>1.11.0</source>
-            <target>1.11.0</target>
+            <source>11</source>
+            <target>11</target>
           </configuration>
           <groupId>org.apache.maven.plugins</groupId>
           <version>3.3</version>
@@ -231,36 +261,7 @@
           <groupId>pl.project13.maven</groupId>
           <version>2.2.4</version>
         </plugin>
-        <plugin>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <configuration>
-            <rules>
-              <bannedPlugins>
-                <!-- will only display a warning but does not fail the build. -->
-                <excludes>
-                  <exclude>org.apache.maven.plugins:maven-verifier-plugin</exclude>
-                </excludes>
-                <level>WARN</level>
-                <message>Please consider using the maven-invoker-plugin
-                  (http://maven.apache.org/plugins/maven-invoker-plugin/)!
-                </message>
-              </bannedPlugins>
-              <requireJavaVersion>
-                <version>[1.11.0,)</version>
-              </requireJavaVersion>
-              <requireMavenVersion>
-                <version>[3.6.0,)</version>
-              </requireMavenVersion>
-              <!--
-              <requireOS>
-                  <family>unix</family>
-              </requireOS>
-              -->
-            </rules>
-          </configuration>
-          <groupId>org.apache.maven.plugins</groupId>
-          <version>3.0.0-M1</version>
-        </plugin>
+        
       </plugins>
     </pluginManagement>
   </build>
