@@ -2,39 +2,51 @@ pipeline {
     agent any
 
     stages {
-        stage('Clean') {
+        stage('Start - preparing workspace') {
             steps {
                 echo 'Cleanign up workspace..'
                 mvn clean
             }
         }
-
-    	stage('Check updates for plugins') {
+		
+		stage('Checking Maven and JDK Versions') {
+            steps {
+                echo 'Checking JDK and Maven versions'
+                mvn enforcer:enforce
+            }
+        }
+		
+    	stage('Checking updates for plugins') {
             steps {
                 echo 'Check for plugins updates'
                 mvn versions:display-plugin-updates
             }
         }
 
-	stage('Check updates for dependencies') {
+		stage('Checking updates for dependencies') {
             steps {
                 echo 'Check for dependenices updates'
                 mvn  versions:display-dependency-updates
             }
         }
-
-        stage('Build') {
+		
+        stage('Build and testing') {
             steps {
-                echo 'Building..'
-                mvn install
+                echo 'Building and installing in local environment..'
+                mvn install 
             }
         }
 
-	
-
+		stage('Documentation') {
+            steps {
+                echo 'Generating documentation'
+                mvn site
+            }
+        }
+		
         stage('Done..') {
             steps {
-                echo 'Done....'
+                echo 'Build pipe done successfully....'
             }
         }
     }
