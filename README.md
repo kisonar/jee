@@ -1,6 +1,6 @@
 # JEE 9 examples with Maven 3.x
 ```
-Mossad project with:
+Tools:
 Apache Maven 3.6.2 
 Java version: 11.0.4, vendor: AdoptOpenJDK,
 Java EE 9 (Jakarta project) libraries
