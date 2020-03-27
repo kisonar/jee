@@ -28,22 +28,6 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- JAVA 8 API -->
-      <!--
-      <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-api</artifactId>
-        <version>${jee.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-web-api</artifactId>
-        <version>${jee.version}</version>
-        <scope>provided</scope>
-      </dependency>
-      -->
-
       <!-- Project Jakarta Java EE 9 -->
       <dependency>
         <artifactId>jakarta.activation-api</artifactId>
@@ -126,12 +110,10 @@
         <groupId>org.glassfish.jersey.core</groupId>
         <version>${jaxrs.version}</version>
       </dependency>
-
     </dependencies>
   </dependencyManagement>
 
   <build>
-  
 	<!-- execute at parent pom check -->
 	<plugins>
       <plugin>
@@ -184,7 +166,6 @@
               -->
             </rules>
           </configuration>
-          
         </plugin>
         <plugin>
 		  <groupId>org.apache.maven.plugins</groupId>
@@ -290,7 +271,6 @@
             </execution>
           </executions>           
         </plugin>
-        
       </plugins>
     </pluginManagement>
   </build>
