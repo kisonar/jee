@@ -293,7 +293,6 @@
         
       </plugins>
     </pluginManagement>
-	
   </build>
 
   <profiles>
@@ -334,7 +333,6 @@
   FindBugs Plug-in
   Jenkins Cobertura Plugin
   -->
-
 
   <reporting>
     <plugins>
@@ -389,6 +387,5 @@
       </plugin>
     </plugins>
   </reporting>
-
 
 </project>
