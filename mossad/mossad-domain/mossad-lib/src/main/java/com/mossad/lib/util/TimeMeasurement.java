@@ -9,7 +9,7 @@ import java.util.Calendar;
 /**
  * @author mmigdal
  */
-public class TimeMeasurement {
+public final class TimeMeasurement {
 
     private long start, stop;
 
