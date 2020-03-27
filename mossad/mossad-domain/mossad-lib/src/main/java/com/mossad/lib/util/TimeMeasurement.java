@@ -43,5 +43,4 @@ public final class TimeMeasurement {
         System.out.println(String.format(" Operation took: %s ", this.getResultInMiliseconds()));
     }
 
-
 }
