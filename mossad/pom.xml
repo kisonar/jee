@@ -11,7 +11,7 @@
   <packaging>pom</packaging>
 
   <properties>
-    <jaxrs.version>2.29.1</jaxrs.version>
+    <jaxrs.version>3.0.0-M6</jaxrs.version>
     <jee.version>9.0</jee.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
