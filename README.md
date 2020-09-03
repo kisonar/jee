@@ -1,8 +1,13 @@
 # JEE 9 examples with Maven 3.x
 ```
 Tools:
-Apache Maven 3.6.2 
-Java version: 11.0.4, vendor: AdoptOpenJDK,
+Apache Maven 3.6.3 
+
+Java
+openjdk version "14.0.2" 2020-07-14
+OpenJDK Runtime Environment (build 14.0.2+12-46)
+OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
+
 Java EE 9 (Jakarta project) libraries
 
 This project is in maintenance mode.
