@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Start - preparing workspace') {
             steps {
-                echo 'Cleanign up workspace..'
+                echo 'Cleaning up workspace..'
                 mvn clean
             }
         }
@@ -25,14 +25,14 @@ pipeline {
 
 		stage('Checking updates for dependencies') {
             steps {
-                echo 'Check for dependenices updates'
+                echo 'Check for dependencies updates'
                 mvn  versions:display-dependency-updates
             }
         }
 		
 		stage('Checking dependencies management') {
             steps {
-                echo 'Check for dependenices updates'
+                echo 'Check for dependencies updates'
                 mvn  dependency:analyze-dep-mgt
             }
         }
