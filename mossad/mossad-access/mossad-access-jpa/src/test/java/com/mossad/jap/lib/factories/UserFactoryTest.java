@@ -37,14 +37,10 @@ public class UserFactoryTest {
 
     @Test
     public void testUserCtreation() {
-
         String name = "myName";
         String surname = "";
         String password = "";
         String email = "";
-
         User user = userFactory.createUser(name, surname, password, email);
-
     }
-
 }

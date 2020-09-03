@@ -22,7 +22,6 @@ public class VerificationService implements IVerificationInterfaceRemote, IVerif
     @Override
     public void verify() {
         throw new UnsupportedOperationException(
-            "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            "Not supported yet.");
     }
-
 }

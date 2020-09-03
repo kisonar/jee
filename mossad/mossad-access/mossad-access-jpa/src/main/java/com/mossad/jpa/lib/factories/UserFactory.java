@@ -21,15 +21,11 @@ public class UserFactory {
      * @return Set of <code>User</code>
      */
     public User createUser(String name, String surname, String password, String email) {
-
         user = new User();
         user.setName(name);
         user.setSurname(surname);
         user.setPassword(password);
         user.setEmail(email);
-
         return user;
-
     }
-
 }

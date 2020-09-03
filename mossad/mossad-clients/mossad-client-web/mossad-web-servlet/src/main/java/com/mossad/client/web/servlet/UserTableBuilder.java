@@ -15,7 +15,6 @@ import java.util.List;
 class UserTableBuilder {
 
     public UserTableBuilder() {
-
     }
 
     void printTableWithUsers(PrintWriter out, List<User> users) {
@@ -32,7 +31,6 @@ class UserTableBuilder {
             );
 
             for (User user : users) {
-
                 out.println("<tr>");
                 geneateCellEntry(out, user.getName());
                 geneateCellEntry(out, user.getSurname());
@@ -43,19 +41,15 @@ class UserTableBuilder {
             }
             out.println("</table>");
         }
-
     }
 
     void printTableWithEntries(PrintWriter out, String title, List<AbstractEntity> entities) {
 
         if (entities != null && entities.size() > 0) {
-
             out.println("<table border=\"1\" cellpadding=\"5\" >");
             out.println("<caption>" + title + "</caption>");
             out.println("<th>id</th>" + "<th>value</th>");
-
             for (AbstractEntity entry : entities) {
-
                 out.println("<tr>");
                 geneateCellEntry(out, entry.getId());
                 geneateCellEntry(out, entry.getValue());
@@ -63,15 +57,11 @@ class UserTableBuilder {
             }
             out.println("</table>");
         }
-
     }
 
     private void geneateCellEntry(PrintWriter out, Object value) {
         out.println("<td>");
         out.println(value);
         out.println("</td>");
-
-
     }
-
 }

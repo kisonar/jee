@@ -6,15 +6,10 @@ package com.mossad.jpa.lib.domain.task;
 
 import com.mossad.jpa.lib.domain.abstraction.AbstractEntity;
 
-//TODO but later
-
 /**
  * @author mmigdal
  */
-//TODO
-// add to DB & Impl
 public class TaskRepetition extends AbstractEntity {
-
 
     private static final long serialVersionUID = 1L;
 

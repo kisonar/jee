@@ -33,7 +33,4 @@ public class TaskStatus extends AbstractEntity {
         super(id, value);
     }
 
-    //==============================
-
-
 }

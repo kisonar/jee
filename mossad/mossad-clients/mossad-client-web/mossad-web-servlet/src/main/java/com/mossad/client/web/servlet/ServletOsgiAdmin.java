@@ -14,8 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
-
 /**
  * @author mmigdal
  */
@@ -23,7 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletOsgiAdmin extends HttpServlet {
 
     private ServiceLocator locator = new ServiceLocator();
-    //com.mossad.osgi.library.OsgiEjbInterfaceRemote
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -37,7 +34,6 @@ public class ServletOsgiAdmin extends HttpServlet {
         throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -47,40 +43,6 @@ public class ServletOsgiAdmin extends HttpServlet {
             out.println("<h1>Servlet ServletOsgiAdmin at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
-
-            //"com.mossad.osgi.library.OsgiEjbInterfaceRemote"
-            //java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService, 
-            //java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService!com.mossad.osgi.library.OsgiEjbInterfaceRemote
-            //
-
-            //OK
-            /*
-            String remoteEJB = "java:global/mossad.osgi-bundle-service_1.0.13/OsgiEjbService!com.mossad.osgi.library.OsgiEjbInterfaceRemote";
-            OsgiEjbInterfaceRemote obj;
-            try {
-                //obj = (OsgiEjbInterfaceRemote)locator.getService(OsgiEjbInterfaceRemote.class.getCanonicalName());
-                
-                
-                obj = (OsgiEjbInterfaceRemote)locator.getService(remoteEJB);
-                
-                if (obj != null) {
-                    System.out.print("Not NULL");
-                    String responseDo = obj.doTheNeedful("Maa");
-                    System.out.print(responseDo);
-                    
-                    
-                } else {
-                    System.out.print("Fuck...."
-                            + " NULL");
-                }
-
-            } catch (NamingException ex) {
-                Logger.getLogger(ServletOsgiAdmin.class.getName()).log(Level.SEVERE, null, ex);
-            } finally {
-
-            }
-            */
-
         }
     }
 

@@ -13,6 +13,4 @@ public interface UserAuthService {
     boolean login(String user, String password);
 
     boolean register(String user, String password);
-
-
 }

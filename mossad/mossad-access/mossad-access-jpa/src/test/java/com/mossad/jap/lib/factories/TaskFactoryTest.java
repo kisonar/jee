@@ -24,5 +24,4 @@ public class TaskFactoryTest {
         Assertions.assertTrue(true);
         System.out.println("TODO");
     }
-
 }

@@ -13,7 +13,6 @@ import org.junit.jupiter.api.BeforeAll;
  */
 public class TaskRelatedFactoryTest {
 
-
     @BeforeAll
     public void setUp() {
     }
@@ -22,13 +21,7 @@ public class TaskRelatedFactoryTest {
     public void tearDown() {
     }
 
-
     public void dummyTest() {
-
         Assertions.assertTrue(true);
-
-        System.out.println("TODO");
-
     }
-
 }

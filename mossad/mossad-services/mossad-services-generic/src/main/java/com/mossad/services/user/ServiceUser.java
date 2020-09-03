@@ -64,7 +64,6 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote {
         return userAccessor.getById(id);
     }
 
-    //@WebMethod
     @Override
     public User getByEmail(String email) throws UserNotFoundException {
 

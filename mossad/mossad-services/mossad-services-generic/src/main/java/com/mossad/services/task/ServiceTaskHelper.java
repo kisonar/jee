@@ -4,7 +4,6 @@
  */
 package com.mossad.services.task;
 
-
 import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperLocal;
 import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperRemote;
 import com.mossad.jpa.lib.domain.task.TaskPriority;
@@ -22,7 +21,7 @@ import javax.persistence.PersistenceContext;
 /**
  * @author mmigdal
  */
-@Stateless//(name = Constants.BINDING_SERVICE_HELPER, mappedName = Constants.BINDING_SERVICE_HELPER)
+@Stateless
 @Remote(IServiceTaskHelperRemote.class)
 @Local(IServiceTaskHelperLocal.class)
 public class ServiceTaskHelper implements IServiceTaskHelperLocal//, IServiceTaskHelperRemote
@@ -33,9 +32,7 @@ public class ServiceTaskHelper implements IServiceTaskHelperLocal//, IServiceTas
 
     @Override
     public List<TaskType> getTaskTypes() {
-
         List<TaskType> taskTypes = new ArrayList<>();
-
         taskTypes.addAll(em.createNamedQuery(Constants.TASK_TYPE_QUERY_NAME)
             .getResultList());
         return taskTypes;
@@ -44,22 +41,17 @@ public class ServiceTaskHelper implements IServiceTaskHelperLocal//, IServiceTas
 
     @Override
     public List<TaskStatus> getTaskStatuses() {
-
         List<TaskStatus> taskStatuses = new ArrayList<>();
         taskStatuses.addAll(em.createNamedQuery(
             Constants.TASK_STATUS_QUERY_NAME).getResultList());
         return taskStatuses;
-
     }
 
     @Override
     public List<TaskPriority> getTaskPriorities() {
-
         List<TaskPriority> taskPriorities = new ArrayList<>();
-
         taskPriorities.addAll(em.createNamedQuery(
             Constants.TASK_PRIORITY_QUERY_NAME).getResultList());
         return taskPriorities;
     }
-
 }

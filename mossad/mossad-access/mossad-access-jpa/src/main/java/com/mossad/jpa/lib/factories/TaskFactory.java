@@ -27,23 +27,6 @@ public class TaskFactory {
         task.setStatus(taskAttributes.getStatus());
         task.setType(taskAttributes.getType());
         return task;
-
     }
-    
-    
-    /*
-    public Task createTask(String title,String description,long priority, long user, long status, long type){
-       
-        task = new Task();
-        task.setTitle(title);
-        task.setDescription(description);
-        task.setPriority(priority);
-        task.setUser(user);
-        task.setStatus(status);
-        task.setType(type);
-        return task;
-        
-    }
-    */
 
 }

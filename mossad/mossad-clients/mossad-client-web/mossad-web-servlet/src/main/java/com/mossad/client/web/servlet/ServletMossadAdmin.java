@@ -50,39 +50,8 @@ public class ServletMossadAdmin extends HttpServlet {
             out.println("<title>Servlet ServletMossad</title>");
             out.println("</head>");
             out.println("<body>");
-
-            
-            /*
-            userTableBuilder.printTableWithUsers(out, serviceUser.getUsers());
-
-            List<AbstractEntity> commitDispalyCollection = new ArrayList<>();
-            commitDispalyCollection.addAll(serviceTaskHelper.getTaskPriorities());           
-            userTableBuilder.printTableWithEntries(out, "Priorities", commitDispalyCollection);
-
-         
-            commitDispalyCollection.clear();
-            commitDispalyCollection.addAll(serviceTaskHelper.getTaskStatuses());
-            userTableBuilder.printTableWithEntries(out, "Task Statuses", commitDispalyCollection);
-
-            commitDispalyCollection.clear();
-            commitDispalyCollection.addAll(serviceTaskHelper.getTaskTypes());
-            userTableBuilder.printTableWithEntries(out, "Task types", commitDispalyCollection);
-
-            
-            List<Task> tasks = serviceTask.getTasks();
-            
-            for (Task task : tasks) {
-                System.out.println(task.getId());
-                System.out.println(task.getTitle());
-                System.out.println(task.getPriority());
-                System.out.println(task.getStatus());
-                System.out.println(task.getType());
-            }
-            */
             out.println("</body>");
             out.println("</html>");
-
-
         } catch (Exception e) {
 
             String error = e.getLocalizedMessage();

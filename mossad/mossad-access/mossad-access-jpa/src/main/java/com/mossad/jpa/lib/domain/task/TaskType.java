@@ -27,12 +27,10 @@ public class TaskType extends AbstractEntity {
     private static final long serialVersionUID = 1L;
 
     public TaskType() {
-
     }
 
     public TaskType(Long id, String value) {
         super(id, value);
     }
-
 
 }
