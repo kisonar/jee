@@ -14,13 +14,12 @@ services:
     environment:
       - ORACLE_ENABLE_XDB=tru
       - ORACLE_ALLOW_REMOTE=true
-      #- ORACLE_DISABLE_ASYNCH_IO=true
+      - ORACLE_DISABLE_ASYNCH_IO=true
 
 #==============================================================
 #XDB user with default password: xdb
 # username SYS & SYSTEM
 # password: oracle
-
 
 # Login http://localhost:8080/apex/apex_admin with following credential:
 #username: ADMIN
