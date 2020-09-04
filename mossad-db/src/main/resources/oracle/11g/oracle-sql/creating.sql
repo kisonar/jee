@@ -1,8 +1,6 @@
-
 -- as system user
-CREATE USER mossad
-  IDENTIFIED BY mossad
-  DEFAULT TABLESPACE mossad;
+CREATE USER mossad IDENTIFIED BY mossad
+--  DEFAULT TABLESPACE mossad;
 commit;
 
 --grant permissions
@@ -16,21 +14,19 @@ grant create type to mossad;
 GRANT RESOURCE to mossad;
 commit;
 
-
---jako mossad
 CREATE TABLE task_status (
   id INT NOT NULL,
   val VARCHAR2(20) NOT NULL,  
   CONSTRAINT TASK_STATUS_PK PRIMARY KEY ("ID")
 ) ;
 commit;
---CREATE UNIQUE INDEX TASK_STATUS_UNIQUE_INDEX_ID ON TASK_STATUS (ID); 
---CREATE UNIQUE INDEX TASK_STATUS_UNIQUE_INDEX_VAL ON TASK_STATUS (VAL); 
---commit;
+CREATE UNIQUE INDEX TASK_STATUS_UNIQUE_INDEX_VAL ON TASK_STATUS (VAL);
+commit;
 insert into task_status values (1,'Not started');
 insert into task_status values (2,'Ongoing');
 insert into task_status values (3,'Finished');
 insert into task_status values (4,'Paused');
+insert into task_status values (5,'Under creation');
 commit;
 
 CREATE TABLE task_type (
@@ -57,6 +53,7 @@ insert into task_priority values (1,'High');
 insert into task_priority values (2,'Medium');
 insert into task_priority values (3,'Low');
 insert into task_priority values (4,'Not specified');
+insert into task_priority values (5,'Unknown');
 commit;
 
 CREATE TABLE mossad_user (
@@ -68,11 +65,13 @@ CREATE TABLE mossad_user (
   CONSTRAINT mossad_user_PK PRIMARY KEY ("ID")
 ) ;
 commit;
-CREATE UNIQUE INDEX mossad_user_UNIQUE_INDEX_email ON mossad_user (email); 
+CREATE UNIQUE INDEX mossad_user_UNIQUE_INDEX_email ON mossad_user (email);
 commit;
 --//TODO add autoincrement
 insert into mossad_user values (1,'user1name','user1surname','user1email@wp.pl','user1password');
 insert into mossad_user values (2,'user2name','user2surname','user2email@wp.pl','user2password');
+insert into mossad_user values (3,'user3name','user3surname','user3email@wp.pl','user3password');
+insert into mossad_user values (4,'user4name','user4surname','user4email@wp.pl','user4password');
 commit;
 
 CREATE TABLE mossad_task (
@@ -83,29 +82,16 @@ CREATE TABLE mossad_task (
   userId int NOT NULL ,
   status int NOT NULL,
   type int NOT NULL,
-  CONSTRAINT mossad_task_PK PRIMARY KEY ("ID")
-  --CONSTRAINT `priority_fk` FOREIGN KEY (`priority`) REFERENCES `task_priority` (`id`),
-  --CONSTRAINT `status_fk` FOREIGN KEY (`status`) REFERENCES `task_status` (`id`), 
-  --CONSTRAINT `type_fk` FOREIGN KEY (`type`) REFERENCES `task_type` (`id`),
-  --CONSTRAINT `user_fk` FOREIGN KEY (`userId`) REFERENCES `mossad_user` (`id`)
-  
+  CONSTRAINT mossad_task_PK PRIMARY KEY ("ID"),
+  CONSTRAINT mossad_task_priority_fk FOREIGN KEY (priority) REFERENCES task_priority (id),
+  CONSTRAINT mossad_task_status_fk FOREIGN KEY (status) REFERENCES task_status (id),
+  CONSTRAINT mossad_task_type_fk FOREIGN KEY (type) REFERENCES task_type (id),
+  CONSTRAINT mossad_task_user_fk FOREIGN KEY (userId) REFERENCES mossad_user (id)
 ) ;
+commit;
 
-
-INSERT INTO `mossad_task` (`id`, `title`, `description`, `priority`, `userId`, `status`, `type`) VALUES ('1', 'Task title', 'Task descrption', '2', '1', '3', '6');
-
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO mossad_task VALUES ('1', 'Task title', 'Task descrption', '2', '1', '3', '6');
+commit;
 
 
 --TODO to add to task table dodac pozniuej
