@@ -1,6 +1,6 @@
 -- as system user
 CREATE USER mossad IDENTIFIED BY mossad
---  DEFAULT TABLESPACE mossad;
+--  DEFAULT TABLESPACE mossad #TODO
 commit;
 
 --grant permissions
@@ -94,7 +94,6 @@ commit;
 INSERT INTO mossad.mossad_task VALUES ('1', 'Task title', 'Task descrption', '2', '1', '3', '6');
 commit;
 
-
 --TODO to add to task table dodac pozniuej
 --due time
 --repetition
@@ -103,7 +102,6 @@ commit;
 --URL
 --postpone counter
 
-
 -- --
 --TODO
 
@@ -111,7 +109,3 @@ commit;
 --Note
 --Tag
 --Sharing Task
-
-
-
-
