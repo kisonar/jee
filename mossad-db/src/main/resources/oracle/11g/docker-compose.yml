@@ -8,25 +8,10 @@ services:
       - 5500:5500
       - 8080:8080
     volumes:
-    #- ./oracle:/u01/app/oracle
+    # - ./oracle:/u01/app/oracle TODO - does not work
     - ./oracle-sql:/docker-entrypoint-initdb.d/
 
     environment:
       - ORACLE_ENABLE_XDB=tru
       - ORACLE_ALLOW_REMOTE=true
       - ORACLE_DISABLE_ASYNCH_IO=true
-
-#==============================================================
-#XDB user with default password: xdb
-# username SYS & SYSTEM
-# password: oracle
-
-# Login http://localhost:8080/apex/apex_admin with following credential:
-#username: ADMIN
-#password: admin
-
-#hostname: localhost
-#port: 1521
-#sid: xe
-#username: system
-#password: oracle

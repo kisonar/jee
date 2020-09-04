@@ -1,5 +1,5 @@
 -- as system user
-CREATE USER mossad IDENTIFIED BY mossad
+CREATE USER mossad IDENTIFIED BY mossad;
 --  DEFAULT TABLESPACE mossad #TODO
 commit;
 
@@ -11,7 +11,6 @@ grant create session to mossad;
 grant create table to mossad;
 grant create trigger to mossad;
 grant create type to mossad;
-grant create references to mossad;
 GRANT RESOURCE to mossad;
 commit;
 
