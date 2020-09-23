@@ -93,7 +93,7 @@
         <groupId>org.glassfish.jersey.containers</groupId>
         <version>${jaxrs.version}</version>
       </dependency>
-      <!-- Tomcat requires this artifact for 100%-->
+      <!-- Tomcat requires this artifact -->
       <dependency>
         <artifactId>jersey-hk2</artifactId>
         <groupId>org.glassfish.jersey.inject</groupId>
@@ -158,11 +158,6 @@
               <requireMavenVersion>
                 <version>[3.5.2,)</version>
               </requireMavenVersion>
-              <!--
-              <requireOS>
-                  <family>unix</family>
-              </requireOS>
-              -->
             </rules>
           </configuration>
         </plugin>
