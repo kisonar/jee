@@ -18,7 +18,6 @@
   </properties>	
 
   <modules>
-    <module>mossad-db</module>
     <module>mossad-domain</module>
     <module>mossad-access</module>
     <module>mossad-services</module>
