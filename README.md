@@ -11,7 +11,7 @@ OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
 Java EE 9 (Jakarta project) libraries
 
 This project is in maintenance mode.
-Used for laerning & testing  Maven & Java EE solutions. 
+I used it for laerning & testing  Maven & Java EE solutions. 
 I do not guarantee that runtime works fine.
 
 How to run Maven:
@@ -41,7 +41,7 @@ ServerName: 127.0.0.1
 for MySQL
 asadmin create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource 	   --restype javax.sql.DataSource --property portNumber=3306:password=mossad:user=mossad:serverName=127.0.0.1:databaseName=test MySQL_Connection_Pool_test
 
-for orlace
+for Orlace
 asadmin create-jdbc-connection-pool --datasourceclassname oracle.jdbc.pool.OracleDataSource --restype javax.sql.DataSource --property portNumber=1521:password=mossad:user=mossad:serverName=127.0.0.1:databaseName=XE Oracle_XE_JDBC_Connection_Pool_Mossad
 
 url=jdbc:oracle:thin:@127.0.01:1521:XE
@@ -89,7 +89,7 @@ Resource Type: javax.jms.Topic
 asadmin create-jms-resource --restype javax.jms.Topic MossadTopic
 ````
 
-### GalssFish
+### GlassFish
 ```
 Path to asadmin
 /pathToGlashFish/glassfish-4.0/bin
@@ -97,8 +97,8 @@ Path to asadmin
 http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.30
 http://mvnrepository.com/artifact/com.oracle/ojdbc14 ==> Oracle JDBC Driver � 10.2.0.4.0 
 
-Get the jar and put it to glassfish
-should be placed under the lib folder, not under lib/ext folder. 
+Get the jar and put it to GlassFish
+Jar should be placed under lib folder, not under lib/ext folder. 
 
 For Local EJB runner set in run config
 -Djava.ext.dirs=/usr/local/glassfish-3.1/glassfish/lib 
