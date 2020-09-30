@@ -2,20 +2,18 @@
 ```
 Tools:
 Apache Maven 3.6.3 
-
-Java
-openjdk version "14.0.2" 2020-07-14
-OpenJDK Runtime Environment (build 14.0.2+12-46)
-OpenJDK 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
+openjdk 15 2020-09-15
+OpenJDK Runtime Environment (build 15+36-1562)
+OpenJDK 64-Bit Server VM (build 15+36-1562, mixed mode, sharing)
 
 Java EE 9 (Jakarta project) libraries
 
 This project is in maintenance mode.
-I used it for laerning & testing  Maven & Java EE solutions. 
+I have used it for laerning & testing  Maven & Java EE solutions. 
 I do not guarantee that runtime works fine.
 
 How to run Maven:
-mvn clean install versions:display-dependency-updates versions:display-plugin-updates
+mvn clean install javadoc:javadoc versions:display-plugin-updates dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate
 ``` 
 
 ## GlassFish stuff

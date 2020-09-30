@@ -15,6 +15,7 @@
     <jee.version>9.0</jee.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <mossad.java.version>15</mossad.java.version>
   </properties>	
 
   <modules>
@@ -153,10 +154,10 @@
                 </message>
               </bannedPlugins>
               <requireJavaVersion>
-                <version>11</version>
+                <version>${mossad.java.version}</version>
               </requireJavaVersion>
               <requireMavenVersion>
-                <version>[3.5.2,)</version>
+                <version>[3.6.3]</version>
               </requireMavenVersion>
             </rules>
           </configuration>
@@ -166,9 +167,9 @@
           <artifactId>maven-compiler-plugin</artifactId>
 		  <version>3.8.0</version>
           <configuration>
-            <source>11</source>
-            <target>11</target>
-			<release>11</release>
+            <source>${mossad.java.version}</source>
+            <target>${mossad.java.version}</target>
+			<release>${mossad.java.version}</release>
           </configuration>                  
         </plugin>
         <plugin>
@@ -307,7 +308,6 @@
   FindBugs Plug-in
   Jenkins Cobertura Plugin
   -->
-
   <reporting>
     <plugins>
       <plugin>
@@ -331,14 +331,14 @@
         <version>3.0.0</version>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
         <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.7</version>
         <configuration>
           <formats>
             <format>xml</format>
           </formats>
         </configuration>
-        <groupId>org.codehaus.mojo</groupId>
-        <version>2.7</version>
       </plugin>
       <!-- needs grphvix @ system path and mvn site -->
       <!-- site -->
