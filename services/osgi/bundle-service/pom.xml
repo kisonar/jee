@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>kisonar</groupId>
+        <artifactId>jee-services-osgi</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jee-services-osgi-bundle-service</artifactId>
+    <name>${project.artifactId}</name>
+    <packaging>bundle</packaging>
+
+    <dependencies>
+        <dependency>
+            <artifactId>org.osgi.core</artifactId>
+            <groupId>org.osgi</groupId>
+        </dependency>
+        <dependency>
+            <groupId>kisonar</groupId>
+            <artifactId>jee-services-osgi-library</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>kisonar</groupId>
+            <artifactId>jee-services-osgi-bundle-library</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                    <instructions>
+                        <Bundle-Activator>com.mossad.osgi.budle.service.OsgiBundleServiceActivator
+                        </Bundle-Activator>
+                        <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
+                    </instructions>
+                </configuration>
+                <extensions>true</extensions>
+                <groupId>org.apache.felix</groupId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
