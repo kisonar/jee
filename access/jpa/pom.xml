@@ -6,7 +6,7 @@
     <parent>
         <groupId>kisonar</groupId>
         <artifactId>jee-access</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>jee-access-jpa</artifactId>
@@ -20,7 +20,7 @@
         <dependency>
             <groupId>kisonar</groupId>
             <artifactId>jee-domain-lib</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <artifactId>junit-jupiter-engine</artifactId>

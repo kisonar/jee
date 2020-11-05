@@ -8,7 +8,7 @@
     <parent>
         <groupId>kisonar</groupId>
         <artifactId>jee-clients-desktop</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>jee-clients-desktop-app</artifactId>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>kisonar</groupId>
             <artifactId>jee-services-irp</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <artifactId>junit-jupiter-engine</artifactId>

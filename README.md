@@ -13,7 +13,10 @@ I have used it for laerning & testing  Maven & Java EE solutions.
 I do not guarantee that runtime works fine.
 
 How to run Maven:
-mvn clean install javadoc:javadoc versions:display-plugin-updates dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate
+mvn clean install 
+mvn javadoc:javadoc 
+mvn versions:display-plugin-updates 
+mvn dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate
 ``` 
 
 ## GlassFish stuff
