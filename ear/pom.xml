@@ -7,7 +7,7 @@
     <parent>
         <groupId>kisonar</groupId>
         <artifactId>jee</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>mossad-ear</artifactId>
@@ -23,19 +23,19 @@
             <groupId>kisonar</groupId>
             <artifactId>jee-services-generic</artifactId>
             <type>ejb</type>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>kisonar</groupId>
             <artifactId>jee-clients-web-servlet</artifactId>
             <type>war</type>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>kisonar</groupId>
             <artifactId>jee-clients-web-jsf</artifactId>
             <type>war</type>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
