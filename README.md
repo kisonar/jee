@@ -9,7 +9,7 @@ OpenJDK 64-Bit Server VM (build 15+36-1562, mixed mode, sharing)
 Java EE 9 (Jakarta project) libraries
 
 This project is in maintenance mode.
-I have used it for laerning & testing  Maven & Java EE solutions. 
+I have used it for learning & testing  Maven & Java EE solutions. 
 I do not guarantee that runtime works fine.
 
 How to run Maven:
