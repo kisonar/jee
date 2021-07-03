@@ -36,13 +36,9 @@
                 <artifactId>maven-bundle-plugin</artifactId>
                 <configuration>
                     <instructions>
-                        <Bundle-Activator>com.mossad.osgi.bundle.library.activator.OsgiBundleLibraryActivator
-                        </Bundle-Activator>
+                        <Bundle-Activator>com.mossad.osgi.bundle.library.activator.OsgiBundleLibraryActivator</Bundle-Activator>
                         <Bundle-SymbolicName>mossad.mossad-osgi-bundle-library</Bundle-SymbolicName>
-                        <!--
-                        This has to be checked
                         <Export-Package>com.mossad.osgi.bundle.library.*</Export-Package>
-                        -->
                         <!-- including external jar into bundle -->
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                     </instructions>
