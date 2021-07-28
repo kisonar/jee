@@ -15,7 +15,7 @@
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mossad.java.version>11</mossad.java.version>
+        <mossad.java.version>16</mossad.java.version>
         <dependency.dir.name>libs</dependency.dir.name>
         <dependency.dir.location>${project.build.directory}/${dependency.dir.name}</dependency.dir.location>
     </properties>
@@ -238,7 +238,7 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>4.2.0</version>
+                    <version>5.1.2</version>
                 </plugin>
                 <!-- Add SVN revision to metadata against mvn package-->
                 <plugin>

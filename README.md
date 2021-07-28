@@ -14,7 +14,8 @@ How to run Maven:
 mvn clean install 
 mvn javadoc:javadoc 
 mvn versions:display-plugin-updates 
-mvn dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate org.pitest:pitest-maven:mutationCoverage
+mvn dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate 
+mvn clean install org.pitest:pitest-maven:mutationCoverage
 ``` 
 
 ## GlassFish stuff
