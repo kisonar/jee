@@ -11,7 +11,7 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <jaxrs.version>3.0.0-M6</jaxrs.version>
+        <org.glassfish.jersey.version>3.0.3</org.glassfish.jersey.version>
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -45,6 +45,7 @@
                 <artifactId>jakarta.ws.rs-api</artifactId>
                 <groupId>jakarta.ws.rs</groupId>
                 <version>2.1.6</version>
+                <!-- 3.0.0 -->
             </dependency>
             <dependency>
                 <artifactId>jakarta.ejb-api</artifactId>
@@ -69,6 +70,7 @@
                 <groupId>jakarta.persistence</groupId>
                 <scope>provided</scope>
                 <version>2.2.3</version>
+                <!-- 3.0.0-->
             </dependency>
             <dependency>
                 <artifactId>jakarta.servlet-api</artifactId>
@@ -98,23 +100,23 @@
             <dependency>
                 <artifactId>jersey-container-servlet</artifactId>
                 <groupId>org.glassfish.jersey.containers</groupId>
-                <version>${jaxrs.version}</version>
+                <version>${org.glassfish.jersey.version}</version>
             </dependency>
             <!-- Tomcat requires these artifacts -->
             <dependency>
                 <artifactId>jersey-hk2</artifactId>
                 <groupId>org.glassfish.jersey.inject</groupId>
-                <version>${jaxrs.version}</version>
+                <version>${org.glassfish.jersey.version}</version>
             </dependency>
             <dependency>
                 <artifactId>jersey-server</artifactId>
                 <groupId>org.glassfish.jersey.core</groupId>
-                <version>${jaxrs.version}</version>
+                <version>${org.glassfish.jersey.version}</version>
             </dependency>
             <dependency>
                 <artifactId>jersey-client</artifactId>
                 <groupId>org.glassfish.jersey.core</groupId>
-                <version>${jaxrs.version}</version>
+                <version>${org.glassfish.jersey.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
