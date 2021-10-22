@@ -12,13 +12,14 @@ import com.mossad.jpa.lib.irp.IServiceUser;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.exceptions.user.UserExistsException;
 import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+
 import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 
 /**
  * @author mmigdal
@@ -47,10 +48,10 @@ public class UserAccessor extends AbstractAccessor implements IServiceUser {
         // List<User> usersResult = em
         List<User> usersResult = new ArrayList<>();
         usersResult.addAll(em
-            .createNamedQuery(Constants.LOGIN_USER_BY_EMAIL_AND_PASSWORD)
-            .setParameter(Constants.PARAM_EMAIL, email)
-            .setParameter(Constants.PARAM_PASSWORD, password)
-            .getResultList());
+                .createNamedQuery(Constants.LOGIN_USER_BY_EMAIL_AND_PASSWORD)
+                .setParameter(Constants.PARAM_EMAIL, email)
+                .setParameter(Constants.PARAM_PASSWORD, password)
+                .getResultList());
         //getSingleResult() maybe?
 
         if (usersResult.isEmpty()) {
@@ -64,7 +65,7 @@ public class UserAccessor extends AbstractAccessor implements IServiceUser {
     public User getById(Long id) throws UserNotFoundException {
 
         return (User) em.createNamedQuery(Constants.QUERY_GET_USER_BY_ID)
-            .setParameter(Constants.PARAM_ID, id).getSingleResult();
+                .setParameter(Constants.PARAM_ID, id).getSingleResult();
 
     }
 
@@ -76,9 +77,9 @@ public class UserAccessor extends AbstractAccessor implements IServiceUser {
         CriteriaQuery cq = cb.createQuery();
         Root<User> root = cq.from(User.class);
         cq.where(
-            cb.equal(
-                root.get("email"),
-                cb.parameter(String.class, "email")));
+                cb.equal(
+                        root.get("email"),
+                        cb.parameter(String.class, "email")));
 
         TypedQuery<User> query = em.createQuery(cq);
         query.setParameter("email", email);
@@ -101,13 +102,13 @@ public class UserAccessor extends AbstractAccessor implements IServiceUser {
     @Override
     public User updateUser(String newName, String newSurname, User user) throws UserNotFoundException {
         throw new UnsupportedOperationException(
-            "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void activateUser(Long id) {
         throw new UnsupportedOperationException(
-            "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                "Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -146,8 +147,8 @@ public class UserAccessor extends AbstractAccessor implements IServiceUser {
         List<User> usersResult = new ArrayList<>();
 
         usersResult.addAll(em
-            .createNamedQuery(Constants.GET_ALL_USERS)
-            .getResultList());
+                .createNamedQuery(Constants.GET_ALL_USERS)
+                .getResultList());
 
         return usersResult;
 

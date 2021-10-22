@@ -10,13 +10,14 @@ import com.mossad.jpa.lib.domain.task.TaskPriority;
 import com.mossad.jpa.lib.domain.task.TaskStatus;
 import com.mossad.jpa.lib.domain.task.TaskType;
 import com.mossad.lib.domain.constants.Constants;
+import jakarta.ejb.Local;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
 import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.Local;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  * @author mmigdal

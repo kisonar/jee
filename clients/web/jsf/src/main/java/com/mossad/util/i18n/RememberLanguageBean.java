@@ -5,10 +5,11 @@
 package com.mossad.util.i18n;
 
 import com.mossad.util.cookies.CookiesOperations;
-import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
-import javax.servlet.http.Cookie;
+import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.SessionScoped;
+import jakarta.servlet.http.Cookie;
+
+import java.io.Serializable;;
 
 /**
  * @author Buba

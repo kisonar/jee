@@ -4,12 +4,11 @@
  */
 package com.mossad.irp.interfaces.task.helper;
 
-import javax.ejb.Remote;
+import jakarta.ejb.Remote;
 
 /**
  * @author mmigdal
  */
 @Remote
 public interface IServiceTaskHelperRemote extends IServiceTaskHelper {
-
 }

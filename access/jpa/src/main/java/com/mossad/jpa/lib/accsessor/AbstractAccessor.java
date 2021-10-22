@@ -5,7 +5,8 @@
  */
 package com.mossad.jpa.lib.accsessor;
 
-import javax.persistence.EntityManager;
+
+import jakarta.persistence.EntityManager;
 
 /**
  * @author mmigdal

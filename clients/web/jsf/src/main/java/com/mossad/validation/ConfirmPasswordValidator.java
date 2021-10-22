@@ -1,12 +1,12 @@
 package com.mossad.validation;
 
-import javax.faces.application.FacesMessage;
-import javax.faces.component.UIComponent;
-import javax.faces.component.UIInput;
-import javax.faces.context.FacesContext;
-import javax.faces.validator.FacesValidator;
-import javax.faces.validator.Validator;
-import javax.faces.validator.ValidatorException;
+import jakarta.faces.application.FacesMessage;
+import jakarta.faces.component.UIComponent;
+import jakarta.faces.component.UIInput;
+import jakarta.faces.context.FacesContext;
+import jakarta.faces.validator.FacesValidator;
+import jakarta.faces.validator.Validator;
+import jakarta.faces.validator.ValidatorException;
 
 /**
  * @author Piotr
@@ -16,7 +16,7 @@ public class ConfirmPasswordValidator implements Validator {
 
     @Override
     public void validate(FacesContext context, UIComponent component,
-        Object value) throws ValidatorException {
+                         Object value) throws ValidatorException {
         UIInput confirmComponent = (UIInput) component.getAttributes().get("confirmFor");
         String confirm = (String) confirmComponent.getValue();
 

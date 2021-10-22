@@ -5,12 +5,11 @@
  */
 package com.mossad.irp.interfaces.user;
 
-import javax.ejb.Remote;
+import jakarta.ejb.Remote;
 
 /**
  * @author mmigdal
  */
 @Remote
 public interface IServiceUserRemote extends IServiceUserLocal {
-
 }

@@ -10,14 +10,14 @@ import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.factories.TaskFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.task.TaskAttributes;
-import java.util.List;
-import java.util.logging.Logger;
-import javax.ejb.Local;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import jakarta.annotation.PostConstruct;
+import jakarta.ejb.Local;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateless;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 
+import java.util.List;
 
 /**
  * @author mmigdal
@@ -32,13 +32,9 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
     @PersistenceContext
     private EntityManager em;
 
-    private Logger log;
-
-
-    @javax.annotation.PostConstruct
+    @PostConstruct
     public void init() {
         taskFactory = new TaskFactory();
-        log = Logger.getLogger(Constants.LOGGER_SERVICE_TASK);
     }
 
     @Override
@@ -50,14 +46,12 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
 
     @Override
     public void deleteTask(Long taskId) {
-
         Task task = getTask(taskId);
 
         if (task == null) {
         } else {
             em.remove(task);
         }
-
     }
 
     @Override
@@ -69,12 +63,9 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
 
     @Override
     public List<Task> getTasks(Long userId) {
-
         List<Task> tasks = em.createNamedQuery(Constants.TASK_QUERY_NAME_GET_USER_TASKS)
             .setParameter(Constants.PARAM_USER_ID, userId).getResultList();
-
         return tasks;
-
     }
 
     @Override
@@ -84,7 +75,6 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
 
         if (task == null) {
         } else {
-
             //update parameters
             String title = taskAttributes.getTitle();
             String description = taskAttributes.getDescription();
@@ -111,12 +101,8 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
             if (type != 0) {
                 task.setType(type);
             }
-
             em.persist(task);
-
-
         }
-
         return task;
     }
 

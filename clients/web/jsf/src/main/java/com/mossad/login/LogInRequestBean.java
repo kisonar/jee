@@ -1,20 +1,18 @@
 package com.mossad.login;
 
+import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.ManagedProperty;
+import jakarta.faces.bean.RequestScoped;
+import jakarta.faces.context.ExternalContext;
+import jakarta.faces.context.FacesContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
-import javax.faces.context.ExternalContext;
-import javax.faces.context.FacesContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
 
-/**
- * @author Piotr Babij
- */
 @ManagedBean(name = "logInRequestBean")
 @RequestScoped
 public class LogInRequestBean implements Serializable {
@@ -47,10 +45,10 @@ public class LogInRequestBean implements Serializable {
             externalContext.redirect(from);
         } catch (IOException ex) {
             Logger.getLogger(LogInRequestBean.class.getName())
-                .log(Level.SEVERE, "Redirection to " + from + " failed", ex);
+                    .log(Level.SEVERE, "Redirection to " + from + " failed", ex);
         } catch (ServletException ex) {
             Logger.getLogger(LogInBean.class.getName())
-                .log(Level.SEVERE, "Login failed: " + email + " " + password, ex);
+                    .log(Level.SEVERE, "Login failed: " + email + " " + password, ex);
 
             logInBean.setLoggedIn(false);
         }

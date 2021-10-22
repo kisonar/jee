@@ -5,8 +5,8 @@
  */
 package com.mossad.osgi.library;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Remote;
+import jakarta.annotation.security.PermitAll;
+import jakarta.ejb.Remote;
 
 /**
  * @author mmigdal

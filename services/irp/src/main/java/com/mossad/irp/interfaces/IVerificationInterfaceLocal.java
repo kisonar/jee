@@ -5,7 +5,7 @@
  */
 package com.mossad.irp.interfaces;
 
-import javax.ejb.Local;
+import jakarta.ejb.Local;
 
 /**
  * @author mmigdal

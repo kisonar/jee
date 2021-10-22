@@ -1,12 +1,10 @@
 package com.mossad.login;
 
-import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import jakarta.faces.bean.ManagedBean;
+import jakarta.faces.bean.SessionScoped;
 
-/**
- * @author Piotr Babij
- */
+import java.io.Serializable;
+
 @ManagedBean(name = "logInBean")
 @SessionScoped
 public class LogInBean implements Serializable {

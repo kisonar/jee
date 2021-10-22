@@ -10,8 +10,9 @@ import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.factories.TaskFactory;
 import com.mossad.jpa.lib.irp.IServiceTask;
 import com.mossad.lib.domain.task.TaskAttributes;
+import jakarta.persistence.EntityManager;
+
 import java.util.List;
-import javax.persistence.EntityManager;
 
 /**
  * @author mmigdal

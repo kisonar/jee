@@ -6,12 +6,12 @@ package com.mossad.jpa.lib.domain.task;
 
 import com.mossad.jpa.lib.domain.abstraction.AbstractEntityLite;
 import com.mossad.lib.domain.constants.Constants;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.NamedQueries;
+import jakarta.persistence.NamedQuery;
+import jakarta.persistence.Table;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
 
 /**
  * @author mmigdal
