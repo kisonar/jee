@@ -69,8 +69,7 @@
                 <artifactId>jakarta.persistence-api</artifactId>
                 <groupId>jakarta.persistence</groupId>
                 <scope>provided</scope>
-                <version>2.2.3</version>
-                <!-- 3.0.0-->
+                <version>3.0.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.servlet-api</artifactId>

@@ -12,6 +12,9 @@ import com.mossad.jpa.lib.factories.UserFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.exceptions.user.UserExistsException;
 import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,8 +23,6 @@ import javax.annotation.PreDestroy;
 import javax.ejb.Local;
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  * @author mmigdal
@@ -32,7 +33,7 @@ import javax.persistence.PersistenceContext;
 @Local(IServiceUserLocal.class)
 public class ServiceUser implements IServiceUserLocal, IServiceUserRemote {
 
-    private static final Logger log = Logger.getLogger(Constants.LOGGER_SERVICE_USER);
+    private static final Logger LOGGER = Logger.getLogger(Constants.LOGGER_SERVICE_USER);
     private UserFactory userFactory;
     private UserAccessor userAccessor;
     @PersistenceContext
@@ -53,14 +54,12 @@ public class ServiceUser implements IServiceUserLocal, IServiceUserRemote {
     @Override
     public User loginUser(String email, String password)
         throws UserNotFoundException {
-
         return userAccessor.loginUser(email, password);
     }
 
     @Override
     public User getById(Long id) throws UserNotFoundException {
-
-        log.log(Level.INFO, "ServiceUser - finding user :{0}", id);
+        LOGGER.log(Level.INFO, "ServiceUser - finding user :{0}", id);
         return userAccessor.getById(id);
     }
 
