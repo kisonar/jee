@@ -6,10 +6,9 @@
 package com.mossad.osgi.budle.service.ejb;
 
 import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
+import jakarta.annotation.security.PermitAll;
 import jakarta.ejb.Remote;
 import jakarta.ejb.Stateless;
-
-import javax.annotation.security.PermitAll;
 
 /**
  * @author mmigdal
@@ -25,5 +24,4 @@ public class OsgiEjbService implements OsgiEjbInterfaceRemote {
     public String doTheNeedful(String input) {
         return ("OsgiEjbService done the needful: " + input);
     }
-
 }

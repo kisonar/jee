@@ -12,6 +12,8 @@ import com.mossad.jpa.lib.factories.UserFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.exceptions.user.UserExistsException;
 import com.mossad.lib.domain.exceptions.user.UserNotFoundException;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import jakarta.ejb.Local;
 import jakarta.ejb.Remote;
 import jakarta.ejb.Stateless;
@@ -21,8 +23,6 @@ import jakarta.persistence.PersistenceContext;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
 
 /**
  * @author mmigdal

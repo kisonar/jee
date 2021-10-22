@@ -10,6 +10,7 @@ import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.factories.TaskFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.task.TaskAttributes;
+import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Local;
 import jakarta.ejb.Remote;
 import jakarta.ejb.Stateless;
@@ -31,7 +32,7 @@ public class ServiceTask implements IServiceTaskLocal, IServiceTaskRemote {
     @PersistenceContext
     private EntityManager em;
 
-    @javax.annotation.PostConstruct
+    @PostConstruct
     public void init() {
         taskFactory = new TaskFactory();
     }
