@@ -7,9 +7,9 @@ package com.mossad.services;
 
 import com.mossad.irp.interfaces.IVerificationInterfaceLocal;
 import com.mossad.irp.interfaces.IVerificationInterfaceRemote;
-import javax.ejb.Local;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
+import jakarta.ejb.Local;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateless;
 
 /**
  * @author mmigdal

@@ -4,13 +4,12 @@
  */
 package com.mossad.irp.interfaces.task.helper;
 
+import jakarta.ejb.Local;
+
 /**
  * @author mmigdal
  */
 
-import javax.ejb.Local;
-
 @Local
 public interface IServiceTaskHelperLocal extends IServiceTaskHelper {
-
 }

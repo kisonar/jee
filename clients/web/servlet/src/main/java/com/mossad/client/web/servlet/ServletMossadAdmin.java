@@ -7,6 +7,7 @@ package com.mossad.client.web.servlet;
 import com.mossad.irp.interfaces.task.IServiceTaskLocal;
 import com.mossad.irp.interfaces.task.helper.IServiceTaskHelperLocal;
 import com.mossad.irp.interfaces.user.IServiceUserLocal;
+import jakarta.ejb.EJB;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,7 +16,6 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.ejb.EJB;
 
 /**
  * @author mmigdal

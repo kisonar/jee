@@ -10,12 +10,12 @@ import com.mossad.jpa.lib.domain.task.Task;
 import com.mossad.jpa.lib.factories.TaskFactory;
 import com.mossad.lib.domain.constants.Constants;
 import com.mossad.lib.domain.task.TaskAttributes;
+import jakarta.ejb.Local;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateless;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
 import java.util.List;
 
 /**

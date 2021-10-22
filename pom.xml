@@ -50,7 +50,7 @@
             <dependency>
                 <artifactId>jakarta.ejb-api</artifactId>
                 <groupId>jakarta.ejb</groupId>
-                <version>3.2.6</version>
+                <version>4.0.0</version>
                 <!-- 4.0.0-->
             </dependency>
             <dependency>

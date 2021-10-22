@@ -6,10 +6,10 @@
 package com.mossad.osgi.budle.service.ejb;
 
 import com.mossad.osgi.library.OsgiEjbInterfaceRemote;
-import javax.annotation.security.PermitAll;
-import javax.ejb.Remote;
-import javax.ejb.Stateless;
+import jakarta.ejb.Remote;
+import jakarta.ejb.Stateless;
 
+import javax.annotation.security.PermitAll;
 
 /**
  * @author mmigdal

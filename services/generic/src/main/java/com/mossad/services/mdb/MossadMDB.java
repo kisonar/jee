@@ -5,14 +5,14 @@
 package com.mossad.services.mdb;
 
 import com.mossad.lib.domain.constants.Constants;
+import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.MessageDriven;
+import jakarta.ejb.MessageDrivenContext;
 import jakarta.jms.Message;
 import jakarta.jms.MessageListener;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.ejb.ActivationConfigProperty;
-import javax.ejb.MessageDriven;
-import javax.ejb.MessageDrivenContext;
 
 /**
  * @author mmigdal
