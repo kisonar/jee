@@ -4,9 +4,6 @@ import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
-/**
- * @author Piotr Babij
- */
 @ManagedBean(name = "logInBean")
 @SessionScoped
 public class LogInBean implements Serializable {

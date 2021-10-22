@@ -14,7 +14,6 @@ import javax.faces.context.FacesContext;
 /**
  * Custom resource bundle that reads properties file encoded in UTF8 standard
  *
- * @author Piotr Babij
  */
 public class UTF8ResourceBundle extends ResourceBundle {
 

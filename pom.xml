@@ -76,8 +76,7 @@
                 <artifactId>jakarta.servlet-api</artifactId>
                 <groupId>jakarta.servlet</groupId>
                 <scope>provided</scope>
-                <version>4.0.3</version>
-                <!-- 5.0.0 -->
+                <version>5.0.0</version>
             </dependency>
 
             <!-- TESTING Junit 5-->
