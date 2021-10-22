@@ -62,8 +62,7 @@
             <dependency>
                 <artifactId>jakarta.faces-api</artifactId>
                 <groupId>jakarta.faces</groupId>
-                <version>2.3.2</version>
-                <!-- 3.0.0-->
+                <version>3.0.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.persistence-api</artifactId>
