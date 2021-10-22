@@ -50,16 +50,19 @@
                 <artifactId>jakarta.ejb-api</artifactId>
                 <groupId>jakarta.ejb</groupId>
                 <version>3.2.6</version>
+                <!-- 4.0.0-->
             </dependency>
             <dependency>
                 <artifactId>jakarta.jms-api</artifactId>
                 <groupId>jakarta.jms</groupId>
                 <version>2.0.3</version>
+                <!-- 3.0.0-->
             </dependency>
             <dependency>
                 <artifactId>jakarta.faces-api</artifactId>
                 <groupId>jakarta.faces</groupId>
                 <version>2.3.2</version>
+                <!-- 3.0.0-->
             </dependency>
             <dependency>
                 <artifactId>jakarta.persistence-api</artifactId>
@@ -72,6 +75,7 @@
                 <groupId>jakarta.servlet</groupId>
                 <scope>provided</scope>
                 <version>4.0.3</version>
+                <!-- 5.0.0 -->
             </dependency>
 
             <!-- TESTING Junit 5-->
@@ -79,7 +83,7 @@
                 <artifactId>junit-jupiter-engine</artifactId>
                 <groupId>org.junit.jupiter</groupId>
                 <scope>test</scope>
-                <version>5.7.2</version>
+                <version>5.8.1</version>
             </dependency>
             <!-- OSGI -->
             <dependency>
