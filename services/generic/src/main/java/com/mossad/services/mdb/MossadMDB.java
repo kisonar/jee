@@ -5,13 +5,14 @@
 package com.mossad.services.mdb;
 
 import com.mossad.lib.domain.constants.Constants;
+import jakarta.jms.Message;
+import jakarta.jms.MessageListener;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 import javax.ejb.MessageDrivenContext;
-import javax.jms.Message;
-import javax.jms.MessageListener;
 
 /**
  * @author mmigdal
@@ -27,13 +28,6 @@ public class MossadMDB implements MessageListener {
 
     @Override
     public void onMessage(Message message) {
-
         log.log(Level.FINE, " Here is MDB {0}", message.toString());
-
-        System.out.println("MDB #################### Message has arrived " + message.toString());
-
-        log.info("MESSAGE BEAN: Message received: " + message);
-        System.out.println("The onMessage() is called");
-
     }
 }
