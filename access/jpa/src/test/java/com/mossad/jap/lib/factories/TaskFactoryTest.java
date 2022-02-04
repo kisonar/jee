@@ -19,9 +19,4 @@ public class TaskFactoryTest {
     @BeforeEach
     public void tearDown() {
     }
-
-    public void dummyTest() {
-        Assertions.assertTrue(true);
-        System.out.println("TODO");
-    }
 }

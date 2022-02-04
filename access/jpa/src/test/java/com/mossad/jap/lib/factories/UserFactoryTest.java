@@ -4,7 +4,6 @@
  */
 package com.mossad.jap.lib.factories;
 
-import com.mossad.jpa.lib.domain.user.User;
 import com.mossad.jpa.lib.factories.UserFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -30,17 +29,6 @@ public class UserFactoryTest {
 
     @Test
     public void dummyTest() {
-
         Assertions.assertNotNull(userFactory);
-
-    }
-
-    @Test
-    public void testUserCtreation() {
-        String name = "myName";
-        String surname = "";
-        String password = "";
-        String email = "";
-        User user = userFactory.createUser(name, surname, password, email);
     }
 }

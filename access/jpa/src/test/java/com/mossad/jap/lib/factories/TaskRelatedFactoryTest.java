@@ -20,8 +20,4 @@ public class TaskRelatedFactoryTest {
     @AfterAll
     public void tearDown() {
     }
-
-    public void dummyTest() {
-        Assertions.assertTrue(true);
-    }
 }
