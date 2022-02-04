@@ -1,8 +1,8 @@
 # JEE 9 examples with Maven 3.x
 ```
 Tools:
-Apache Maven 3.8.1
-Java version: 16.0.1, vendor: AdoptOpenJDK,
+Apache Maven 3.8.4
+Java version: 17, vendor: AdoptOpenJDK,
 
 Java EE 9 (Jakarta project) libraries
 
@@ -17,6 +17,7 @@ mvn versions:display-plugin-updates
 mvn versions:display-dependency-updates
 mvn dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate 
 mvn clean install org.pitest:pitest-maven:mutationCoverage
+
 ``` 
 
 ## GlassFish stuff
