@@ -18,6 +18,9 @@ mvn versions:display-dependency-updates
 mvn dependency:analyze-report dependency:analyze-dep-mgt dependency:analyze-duplicate 
 mvn clean install org.pitest:pitest-maven:mutationCoverage
 
+My default run:
+mvn clean install versions:display-dependency-updates
+mvn clean install versions:display-plugin-updates 
 ``` 
 
 ## GlassFish stuff

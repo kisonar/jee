@@ -11,11 +11,11 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <org.glassfish.jersey.version>3.0.3</org.glassfish.jersey.version>
+        <org.glassfish.jersey.version>3.0.4</org.glassfish.jersey.version>
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mossad.java.version>16</mossad.java.version>
+        <mossad.java.version>17</mossad.java.version>
         <dependency.dir.name>libs</dependency.dir.name>
         <dependency.dir.location>${project.build.directory}/${dependency.dir.name}</dependency.dir.location>
     </properties>
@@ -34,12 +34,12 @@
             <dependency>
                 <artifactId>jakarta.activation-api</artifactId>
                 <groupId>jakarta.activation</groupId>
-                <version>2.0.0</version>
+                <version>2.1.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.annotation-api</artifactId>
                 <groupId>jakarta.annotation</groupId>
-                <version>2.0.0</version>
+                <version>2.1.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.ws.rs-api</artifactId>
@@ -65,7 +65,7 @@
                 <artifactId>jakarta.persistence-api</artifactId>
                 <groupId>jakarta.persistence</groupId>
                 <scope>provided</scope>
-                <version>3.0.0</version>
+                <version>3.1.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.servlet-api</artifactId>
