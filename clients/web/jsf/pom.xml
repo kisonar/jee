@@ -28,9 +28,19 @@
             <groupId>jakarta.faces</groupId>
         </dependency>
         <dependency>
+            <artifactId>jakarta.annotation-api</artifactId>
+            <groupId>jakarta.annotation</groupId>
+        </dependency>
+        <dependency>
             <groupId>kisonar</groupId>
             <artifactId>jee-services-irp</artifactId>
             <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-common</artifactId>
+            <version>3.1.0-M3</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

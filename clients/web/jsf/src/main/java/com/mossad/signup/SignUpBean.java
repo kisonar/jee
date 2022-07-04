@@ -4,11 +4,11 @@
  */
 package com.mossad.signup;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.annotation.ManagedBean;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.UIForm;
 import jakarta.faces.event.AjaxBehaviorEvent;
+import org.glassfish.jersey.process.internal.RequestScoped;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
