@@ -24,10 +24,6 @@ public class RememberLanguageBean extends CookiesOperations implements Serializa
         return language;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
     /**
      * Saves selected language to cookie.
      *
@@ -35,13 +31,6 @@ public class RememberLanguageBean extends CookiesOperations implements Serializa
      */
     public void saveLanguageToCookie(String language) {
         saveStringToCookie(LANGUAGE_COOKIE_NAME, language);
-    }
-
-    /**
-     * Deletes language cookie.
-     */
-    public void deleteLanguageCookie() {
-        deleteCookie(LANGUAGE_COOKIE_NAME);
     }
 
     private void checkLanguageCookie() {
