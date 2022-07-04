@@ -1,19 +1,19 @@
 package com.mossad.login;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.RequestScoped;
+import jakarta.annotation.ManagedBean;
+import jakarta.faces.annotation.ManagedProperty;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
+import org.glassfish.jersey.process.internal.RequestScoped;
 
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@ManagedBean(name = "logInRequestBean")
+@ManagedBean()
 @RequestScoped
 public class LogInRequestBean implements Serializable {
 

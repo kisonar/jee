@@ -5,17 +5,12 @@
 package com.mossad.util.i18n;
 
 import com.mossad.util.cookies.CookiesOperations;
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.SessionScoped;
 import jakarta.servlet.http.Cookie;
-
-import java.io.Serializable;;
-
+import java.io.Serializable;
 /**
  * @author Buba
  */
-@ManagedBean(name = "rememberLanguageBean")
-@SessionScoped
+
 public class RememberLanguageBean extends CookiesOperations implements Serializable {
 
     private static final String LANGUAGE_COOKIE_NAME = "i18nMSDLanguageCookie";

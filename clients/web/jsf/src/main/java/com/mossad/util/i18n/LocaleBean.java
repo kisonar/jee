@@ -4,11 +4,11 @@
  */
 package com.mossad.util.i18n;
 
-import jakarta.faces.bean.ManagedBean;
-import jakarta.faces.bean.ManagedProperty;
-import jakarta.faces.bean.SessionScoped;
+import jakarta.annotation.ManagedBean;
+import jakarta.faces.annotation.ManagedProperty;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ValueChangeEvent;
+import org.glassfish.jersey.process.internal.RequestScoped;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -25,8 +25,8 @@ import java.util.Map;
  *
  * @author Piotr Babij
  */
-@ManagedBean(name = "localeBean")
-@SessionScoped
+@RequestScoped
+@ManagedBean("localeBean")
 public class LocaleBean implements Serializable {
 
     private Locale locale;

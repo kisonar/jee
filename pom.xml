@@ -52,6 +52,12 @@
                 <version>4.0.1</version>
             </dependency>
             <dependency>
+                <artifactId>jakarta.persistence-api</artifactId>
+                <groupId>jakarta.persistence</groupId>
+                <scope>provided</scope>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
                 <artifactId>jakarta.jms-api</artifactId>
                 <groupId>jakarta.jms</groupId>
                 <version>3.1.0</version>
@@ -59,19 +65,13 @@
             <dependency>
                 <artifactId>jakarta.faces-api</artifactId>
                 <groupId>jakarta.faces</groupId>
-                <version>3.0.0</version>
-            </dependency>
-            <dependency>
-                <artifactId>jakarta.persistence-api</artifactId>
-                <groupId>jakarta.persistence</groupId>
-                <scope>provided</scope>
-                <version>3.1.0</version>
+                <version>4.0.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.servlet-api</artifactId>
                 <groupId>jakarta.servlet</groupId>
                 <scope>provided</scope>
-                <version>5.0.0</version>
+                <version>6.0.0</version>
             </dependency>
 
             <!-- TESTING Junit 5-->
