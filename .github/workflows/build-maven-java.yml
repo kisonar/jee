@@ -16,7 +16,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
-      - name: Run the Maven verify phase
+      - name: Run Maven compilation, unit testing & packaging
         run: mvn clean install
 
   analyze-plugins:
@@ -33,7 +33,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
-      - name: Run the Maven verify phase
+      - name: Run Maven plugin updates
         run: mvn versions:display-plugin-updates
 
   analyze-dependencies:
@@ -50,7 +50,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
-      - name: Run the Maven verify phase
+      - name: Run Maven dependencies updates
         run: mvn versions:display-dependency-updates
 
   analyze-dependencies-duplicates:
@@ -67,5 +67,5 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
-      - name: Run the Maven verify phase
+      - name: Run Maven dependencies duplicates check
         run: mvn dependency:analyze-duplicate
