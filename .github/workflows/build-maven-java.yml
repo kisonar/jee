@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Java 18
         uses: actions/setup-java@v3
+        cache: 'maven'
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
@@ -30,6 +31,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Java 18
         uses: actions/setup-java@v3
+        cache: 'maven'
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
@@ -47,11 +49,12 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Java 18
         uses: actions/setup-java@v3
+        cache: 'maven'
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
       - name: Run the Maven verify phase
-        run: mvn  versions:display-dependency-updates
+        run: mvn versions:display-dependency-updates
 
   analyze-dependencies-duplicates:
     needs: analyze-dependencies
@@ -64,6 +67,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup Java 18
         uses: actions/setup-java@v3
+        cache: 'maven'
         with:
           distribution: 'temurin'
           java-version: '18.0.2+9'
