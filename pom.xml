@@ -11,7 +11,7 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <org.glassfish.jersey.version>3.1.0-M3</org.glassfish.jersey.version>
+        <org.glassfish.jersey.version>3.1.0</org.glassfish.jersey.version>
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -79,7 +79,7 @@
                 <artifactId>junit-jupiter-engine</artifactId>
                 <groupId>org.junit.jupiter</groupId>
                 <scope>test</scope>
-                <version>5.9.0-M1</version>
+                <version>5.9.1</version>
             </dependency>
             <!-- OSGI -->
             <dependency>
@@ -151,7 +151,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0-M1</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <rules>
                             <bannedPlugins>
@@ -168,7 +168,7 @@
                                 <version>${mossad.java.version}</version>
                             </requireJavaVersion>
                             <requireMavenVersion>
-                                <version>[3.6.3]</version>
+                                <version>3.6.3</version>
                             </requireMavenVersion>
                         </rules>
                     </configuration>
@@ -304,7 +304,7 @@
                         <dependency>
                             <groupId>org.pitest</groupId>
                             <artifactId>pitest-junit5-plugin</artifactId>
-                            <version>1.0.0</version>
+                            <version>1.1.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
