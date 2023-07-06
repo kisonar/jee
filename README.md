@@ -11,7 +11,7 @@ I have used it for learning & testing  Maven & Java EE solutions.
 I do not guarantee that runtime works fine.
 
 How to run Maven:
-mvn clean install 
+mvn clean install -T 4
 mvn javadoc:javadoc 
 mvn versions:display-plugin-updates 
 mvn versions:display-dependency-updates
