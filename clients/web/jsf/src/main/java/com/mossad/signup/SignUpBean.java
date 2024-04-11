@@ -4,7 +4,6 @@
  */
 package com.mossad.signup;
 
-import jakarta.annotation.ManagedBean;
 import jakarta.faces.component.UIComponent;
 import jakarta.faces.component.UIForm;
 import jakarta.faces.event.AjaxBehaviorEvent;
@@ -17,7 +16,6 @@ import java.util.regex.Pattern;
 /**
  * @author Piotr
  */
-@ManagedBean
 @RequestScoped
 public class SignUpBean {
 

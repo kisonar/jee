@@ -1,6 +1,5 @@
 package com.mossad.login;
 
-import jakarta.annotation.ManagedBean;
 import jakarta.faces.annotation.ManagedProperty;
 import jakarta.faces.context.ExternalContext;
 import jakarta.faces.context.FacesContext;
@@ -13,7 +12,6 @@ import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-@ManagedBean()
 @RequestScoped
 public class LogInRequestBean implements Serializable {
 
