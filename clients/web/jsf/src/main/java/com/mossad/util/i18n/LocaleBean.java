@@ -4,7 +4,6 @@
  */
 package com.mossad.util.i18n;
 
-import jakarta.annotation.ManagedBean;
 import jakarta.faces.annotation.ManagedProperty;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.event.ValueChangeEvent;
@@ -26,7 +25,6 @@ import java.util.Map;
  * @author Piotr Babij
  */
 @RequestScoped
-@ManagedBean("localeBean")
 public class LocaleBean implements Serializable {
 
     private Locale locale;

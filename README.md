@@ -21,6 +21,9 @@ mvn clean install org.pitest:pitest-maven:mutationCoverage
 My default run:
 mvn clean install versions:display-dependency-updates
 mvn clean install versions:display-plugin-updates 
+
+Full run:
+mvn clean install versions:display-plugin-updates versions:display-dependency-updates org.pitest:pitest-maven:mutationCoverage
 ``` 
 
 ## GlassFish stuff

@@ -1,13 +1,10 @@
 package com.mossad.login;
 
-
-import jakarta.annotation.ManagedBean;
 import org.glassfish.jersey.process.internal.RequestScoped;
 
 import java.io.Serializable;
 
 @RequestScoped
-@ManagedBean("logInBean")
 public class LogInBean implements Serializable {
 
     private String userName;
