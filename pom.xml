@@ -60,7 +60,7 @@
             <dependency>
                 <artifactId>jakarta.jms-api</artifactId>
                 <groupId>jakarta.jms</groupId>
-                <version>3.2.0</version>
+                <version>3.1.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.faces-api</artifactId>
