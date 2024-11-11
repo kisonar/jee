@@ -44,7 +44,7 @@
             <dependency>
                 <artifactId>jakarta.ws.rs-api</artifactId>
                 <groupId>jakarta.ws.rs</groupId>
-                <version>3.1.0</version>
+                <version>4.0.0</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.ejb-api</artifactId>
@@ -65,7 +65,7 @@
             <dependency>
                 <artifactId>jakarta.faces-api</artifactId>
                 <groupId>jakarta.faces</groupId>
-                <version>4.0.1</version>
+                <version>4.1.2</version>
             </dependency>
             <dependency>
                 <artifactId>jakarta.servlet-api</artifactId>
