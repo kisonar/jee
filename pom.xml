@@ -15,7 +15,7 @@
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mossad.java.version>17</mossad.java.version>
+        <mossad.java.version>24</mossad.java.version>
         <dependency.dir.name>libs</dependency.dir.name>
         <dependency.dir.location>${project.build.directory}/${dependency.dir.name}</dependency.dir.location>
     </properties>
@@ -151,7 +151,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.1.0</version>
+                    <version>3.5.0</version>
                     <configuration>
                         <rules>
                             <bannedPlugins>
@@ -172,6 +172,21 @@
                             </requireMavenVersion>
                         </rules>
                     </configuration>
+                    <executions>
+                        <execution>
+                            <id>enforce-maven</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <requireMavenVersion>
+                                        <version>3.0</version>
+                                    </requireMavenVersion>
+                                </rules>
+                            </configuration>
+                        </execution>
+                    </executions>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>

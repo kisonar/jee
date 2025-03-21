@@ -2,7 +2,7 @@
 ```
 Tools:
 Apache Maven 3.8.4
-Java version: 17, vendor: AdoptOpenJDK,
+Java version: 24, vendor: Oracle,
 
 Java EE 9 (Jakarta project) libraries
 
