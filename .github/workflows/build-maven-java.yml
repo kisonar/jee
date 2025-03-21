@@ -16,6 +16,8 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '24'
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@4.0.0-rc-3
       - name: Run Maven compilation, unit testing & packaging
         run: mvn clean install
 
