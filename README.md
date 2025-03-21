@@ -26,6 +26,9 @@ Full run:
 mvn clean install versions:display-plugin-updates versions:display-dependency-updates org.pitest:pitest-maven:mutationCoverage
 ``` 
 
+## GHA plugin for setting up JAVA
+https://github.com/actions/setup-java
+
 ## GlassFish stuff
 
 ###  JDBC
