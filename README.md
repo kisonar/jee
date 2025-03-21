@@ -1,8 +1,8 @@
 # JEE 9 examples with Maven 3.x
 ```
 Tools:
-Apache Maven 3.8.4
-Java version: 17, vendor: AdoptOpenJDK,
+Apache Maven 3.9.9
+Java version: 24, vendor: Oracle,
 
 Java EE 9 (Jakarta project) libraries
 
@@ -25,6 +25,9 @@ mvn clean install versions:display-plugin-updates
 Full run:
 mvn clean install versions:display-plugin-updates versions:display-dependency-updates org.pitest:pitest-maven:mutationCoverage
 ``` 
+
+## GHA plugin for setting up JAVA
+https://github.com/actions/setup-java
 
 ## GlassFish stuff
 

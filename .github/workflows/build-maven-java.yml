@@ -10,12 +10,12 @@ jobs:
       contents: read
     steps:
       - name: GitHub checkout action
-        uses: actions/checkout@v3
-      - name: Setup Java 18
-        uses: actions/setup-java@v3
+        uses: actions/checkout@v4
+      - name: Setup Java 24
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '18.0.2+9'
+          distribution: 'oracle'
+          java-version: '24'
       - name: Run Maven compilation, unit testing & packaging
         run: mvn clean install
 
@@ -27,12 +27,12 @@ jobs:
       contents: read
     steps:
       - name: GitHub checkout action
-        uses: actions/checkout@v3
-      - name: Setup Java 18
-        uses: actions/setup-java@v3
+        uses: actions/checkout@v4
+      - name: Setup Java 24
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '18.0.2+9'
+          distribution: 'oracle'
+          java-version: '24'
       - name: Run Maven plugin updates
         run: mvn versions:display-plugin-updates
 
@@ -44,12 +44,12 @@ jobs:
       contents: read
     steps:
       - name: GitHub checkout action
-        uses: actions/checkout@v3
-      - name: Setup Java 18
-        uses: actions/setup-java@v3
+        uses: actions/checkout@v4
+      - name: Setup Java 24
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '18.0.2+9'
+          distribution: 'oracle'
+          java-version: '24'
       - name: Run Maven dependencies updates
         run: mvn versions:display-dependency-updates
 
@@ -61,11 +61,11 @@ jobs:
       contents: read
     steps:
       - name: GitHub checkout action
-        uses: actions/checkout@v3
-      - name: Setup Java 18
-        uses: actions/setup-java@v3
+        uses: actions/checkout@v4
+      - name: Setup Java 24
+        uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '18.0.2+9'
+          distribution: 'oracle'
+          java-version: '24'
       - name: Run Maven dependencies duplicates check
         run: mvn dependency:analyze-duplicate
