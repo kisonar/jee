@@ -386,7 +386,7 @@
             <plugin>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <groupId>org.codehaus.mojo</groupId>
-                <version>3.0.0</version>
+                <version>3.0.5</version>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
