@@ -276,7 +276,7 @@
                     <!-- insert git hash id -->
                     <groupId>pl.project13.maven</groupId>
                     <artifactId>git-commit-id-plugin</artifactId>
-                    <version>2.2.4</version>
+                    <version>4.9.10</version>
                     <configuration>
                         <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
                         <generateGitPropertiesFile>true</generateGitPropertiesFile>
