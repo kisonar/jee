@@ -11,7 +11,7 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <org.glassfish.jersey.version>4.0.0</org.glassfish.jersey.version>
+        <org.glassfish.jersey.version>4.0.1</org.glassfish.jersey.version>
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
