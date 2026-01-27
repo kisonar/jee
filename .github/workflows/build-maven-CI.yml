@@ -32,13 +32,10 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'oracle'
-          java-version: '25'
-		  
+          java-version: '25'		  
 #      - name: Run Maven versions plugin updates
-#        run: mvn versions:display-plugin-updates
-		
+#        run: mvn versions:display-plugin-updates		
       - name: Run Maven versions dependencies updates
-        run: mvn versions:display-dependency-updates
-		
+        run: mvn versions:display-dependency-updates		
 	  - name: Run Maven dependencies duplicates check
         run: mvn dependency:analyze-duplicate
