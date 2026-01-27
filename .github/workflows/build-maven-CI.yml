@@ -18,24 +18,3 @@ jobs:
           java-version: '25'
       - name: Run Maven compilation, unit testing & packaging
         run: mvn clean install
-
-  analyze-versions:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      id-token: write
-      contents: read
-    steps:
-      - name: GitHub checkout action
-        uses: actions/checkout@v6
-      - name: Setup Java 25
-        uses: actions/setup-java@v5
-        with:
-          distribution: 'oracle'
-          java-version: '25'		  
-#      - name: Run Maven versions plugin updates
-#        run: mvn versions:display-plugin-updates		
-      - name: Run Maven versions dependencies updates
-        run: mvn versions:display-dependency-updates		
-	  - name: Run Maven dependencies duplicates check
-        run: mvn dependency:analyze-duplicate
