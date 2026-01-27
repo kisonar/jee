@@ -33,8 +33,9 @@ jobs:
         with:
           distribution: 'oracle'
           java-version: '25'
-      - name: Run Maven versions plugin updates
-        run: mvn versions:display-plugin-updates
+		  
+#      - name: Run Maven versions plugin updates
+#        run: mvn versions:display-plugin-updates
 		
       - name: Run Maven versions dependencies updates
         run: mvn versions:display-dependency-updates
