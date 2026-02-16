@@ -386,7 +386,7 @@
             <plugin>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <groupId>org.apache.maven.plugins</groupId>
-                <version>3.6</version>
+                <version>3.28.0</version>
             </plugin>
             <plugin>
                 <artifactId>findbugs-maven-plugin</artifactId>
