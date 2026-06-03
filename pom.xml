@@ -274,7 +274,7 @@
                         <detail>true</detail>
                         <printSummary>true</printSummary>
                     </configuration>
-                    <version>3.5.5</version>
+                    <version>3.5.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
