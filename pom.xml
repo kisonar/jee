@@ -218,7 +218,7 @@
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
-                    <version>3.5.0</version>
+                    <version>3.5.1</version>
                     <artifactId>maven-jar-plugin</artifactId>
                     <configuration>
                         <archive>
