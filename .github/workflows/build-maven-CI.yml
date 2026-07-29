@@ -15,6 +15,6 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: 'oracle'
-          java-version: '25'
+          java-version: '26'
       - name: Run Maven compilation, unit testing & packaging
         run: mvn clean install
