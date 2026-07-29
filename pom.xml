@@ -15,7 +15,7 @@
         <jee.version>9.0</jee.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mossad.java.version>24</mossad.java.version>
+        <mossad.java.version>26</mossad.java.version>
         <dependency.dir.name>libs</dependency.dir.name>
         <dependency.dir.location>${project.build.directory}/${dependency.dir.name}</dependency.dir.location>
     </properties>
@@ -88,7 +88,6 @@
                 <scope>provided</scope>
                 <version>6.0.0</version>
             </dependency>
-
             <!-- JAX-RS -->
             <!-- Is it needed by Tomcat? To be verified -->
             <dependency>
@@ -112,16 +111,7 @@
                 <groupId>org.glassfish.jersey.core</groupId>
                 <version>${org.glassfish.jersey.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.12.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.12.0</version>
-            </dependency>
+            <!-- Documentation only -->
             <dependency>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
