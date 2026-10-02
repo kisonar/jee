@@ -11,11 +11,10 @@
     <name>${project.artifactId}</name>
 
     <properties>
-        <org.glassfish.jersey.version>4.0.2</org.glassfish.jersey.version>
-        <jee.version>9.0</jee.version>
+        <org.glassfish.jersey.version>5.0.0-M1</org.glassfish.jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mossad.java.version>26</mossad.java.version>
+        <mossad.java.version>27</mossad.java.version>
         <dependency.dir.name>libs</dependency.dir.name>
         <dependency.dir.location>${project.build.directory}/${dependency.dir.name}</dependency.dir.location>
     </properties>
