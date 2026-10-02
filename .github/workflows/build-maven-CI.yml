@@ -24,4 +24,4 @@ jobs:
         run: mvn --version
 
       - name: Run Maven compilation, unit testing & packaging
-        run: mvn clean install -T 4
+        run: mvn clean install
