@@ -1,8 +1,8 @@
 # JEE 9 examples with Maven 3.x
 ```
 Tools:
-Apache Maven 3.9.9
-Java version: 24, vendor: Oracle,
+Apache Maven 3.9.16
+Java version: 27, vendor: Oracle,
 
 Java EE 9 (Jakarta project) libraries
 
