@@ -2,7 +2,7 @@
 ```
 Tools:
 Apache Maven 3.9.16
-Java version: 29, vendor: Oracle,
+Java version: 27, vendor: Oracle,
 
 Java EE 9 (Jakarta project) libraries
 
