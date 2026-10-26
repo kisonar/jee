@@ -208,7 +208,7 @@
                         <detail>true</detail>
                         <printSummary>true</printSummary>
                     </configuration>
-                    <version>3.6.0</version>
+                    <version>3.6.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
